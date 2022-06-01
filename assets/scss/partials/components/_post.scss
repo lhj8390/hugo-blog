@@ -70,11 +70,14 @@
         background-color: t('primary-lighter');
         display: block;
         border-bottom: 1px solid t('primary-lighter');
+        border-radius: 5px;
+        padding: 15px;
       }
     }
 
     code {
-      font-family: monospace;
+      font-family: 'Fira Code';
+      line-height: 25px;
       padding: 0 2px;
 
       @include themed() {

@@ -105,7 +105,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Code block with Hugo's internal highlight shortcode
 
-{{< highlight html >}}
+{{< highlight html "hl_lines=5">}}
 
 <!DOCTYPE html>
 <html lang="en">

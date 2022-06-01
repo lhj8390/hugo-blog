@@ -72,7 +72,7 @@ body.theme--dark {
   --chr-def-bg-color: #272822;
   --chr-err-color: #960050;
   --chr-err-bg-color: #1e0010;
-  --chr-hl-bg-color: #ffffcc;
+  --chr-hl-bg-color: #362f23c7;
   --chr-lnt-color: #7f7f7f;
   --chr-ln-color: #7f7f7f;
   --chr-k-color: #66d9ef;
@@ -133,6 +133,9 @@ body.theme--dark {
   direction: ltr;
   color: var(--chr-def-color);
   background-color: var(--chr-def-bg-color);
+}
+.chroma * {
+  font-family: 'Fira Code';
 }
 /* Other */
 .chroma .x {

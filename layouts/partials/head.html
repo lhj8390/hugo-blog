@@ -136,6 +136,14 @@
     <link href="{{ $url }}" rel="stylesheet" />
 
   {{- end -}}
+  {{ $style := resources.Get "font/font.css" | resources.Fingerprint }}
+  <link
+    rel="stylesheet"
+    href="{{ $style.RelPermalink }}"
+    integrity="{{ $style.Data.Integrity }}"
+    crossorigin="anonymous"
+    type="text/css"
+  />
 
 
   <!-- Favicons -->
