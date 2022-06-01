@@ -1,0 +1,12 @@
+[en]
+title = "My blog"
+weight = 1
+LanguageName = "EN"
+contentDir = "content/english"
+
+[ko]
+title = "블로그"
+description = "블로그"
+contentDir = "content/english" 
+weight = 2
+LanguageName = "KO"
