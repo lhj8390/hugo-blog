@@ -1,0 +1,12 @@
+  [[main]]
+  name = "홈"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[main]]
+  name = "게시물"
+  weight = 200
+  identifier = "posts"
+  url = "/post/"
+
