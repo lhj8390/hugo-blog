@@ -1,6 +1,7 @@
-baseURL = "https://example.com"
+baseURL = "https://lhj8390.github.io/"
 languageCode = "ko"
 DefaultContentLanguage = "ko"
+displayMode = "dark"
 title = "Website of lhj8390"
 
 # theme as hugo module
