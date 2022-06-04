@@ -93,29 +93,11 @@
 
   {{ end }}
   {{ $style := resources.Get "fontawesome/css/fontawesome.min.css" | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity=""
-    crossorigin="anonymous"
-    type="text/css"
-  />
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="" crossorigin="anonymous" type="text/css" />
   {{ $style := resources.Get "fontawesome/css/solid.min.css" | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity=""
-    crossorigin="anonymous"
-    type="text/css"
-  />
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="" crossorigin="anonymous" type="text/css" />
   {{ $style := resources.Get "fontawesome/css/brands.min.css" | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity=""
-    crossorigin="anonymous"
-    type="text/css"
-  />
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="" crossorigin="anonymous" type="text/css" />
   {{ if .Params.redirectUrl }}
     {{ $style := resources.Get "css/spinner.css" | resources.Minify | resources.Fingerprint }}
     <link
@@ -137,13 +119,7 @@
 
   {{- end -}}
   {{ $style := resources.Get "font/font.css" | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity=""
-    crossorigin="anonymous"
-    type="text/css"
-  />
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="" crossorigin="anonymous" type="text/css" />
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}favicon.ico" type="image/x-icon" />
