@@ -1,4 +1,4 @@
+
 [submodule "public"]
-	path = ./public
+	path = public
 	url = https://github.com/lhj8390/lhj8390.github.io.git
-	branch = master
