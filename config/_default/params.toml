@@ -4,6 +4,7 @@ author = "lhj8390"
 #copyright = "2020-2021"
 description = "LOVE JAVA"
 profilePicture = "images/cow.png"
+displayMode = "dark"
 keywords = ""
 favicon = "favicons/"
 # example ["css/custom.css"]
