@@ -19,10 +19,11 @@ enableRobotsTXT = true
 #googleAnalytics = "UA-123-45"
 
 # Syntax highlighting
+pygmentsStyle = "monokai"
 pygmentsUseClasses = true   
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
-pygmentsStyle = "monokai"
+
 
 [markup]
     [markup.goldmark]

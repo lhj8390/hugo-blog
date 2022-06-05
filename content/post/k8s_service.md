@@ -1,9 +1,9 @@
 +++
 author = "lhj8390"
 title = "쿠버네티스 서비스"
-date = "2022-04-05"
+date = "2022-06-04"
 description = "쿠버네티스의 서비스 개념 및 종류에 대해 설명한다."
-tags = []
+tags = ["DevOps", "server", "docker", "kubernetes", "k8s"]
 categories = [
     "Kubernetes"
 ]
