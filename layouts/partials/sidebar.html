@@ -45,6 +45,11 @@
 
       {{ end }}
     </ul>
+    <ul class="nav__list categories">
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} <span>({{ .Count }})</span></a></li>
+      {{ end }}
+    </ul>
   </div>
   {{- partial "footer.html" (dict "context" . "footerClassModifier" "sidebar") -}}
 </div>
