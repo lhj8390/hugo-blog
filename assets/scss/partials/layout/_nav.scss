@@ -54,6 +54,18 @@
         }
       }
     }
+
+    &.categories {
+      display: block;
+      width: auto;
+      line-height: 30px;
+      max-height: 400px;
+      overflow: scroll;
+
+      span {
+        font-size: 12px;
+      }
+    }
   }
 
   &__link {
