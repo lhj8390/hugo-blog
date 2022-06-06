@@ -61,7 +61,16 @@
       line-height: 30px;
       max-height: 400px;
       overflow: scroll;
+      text-align: center;
+      background-color: transparent;
 
+      // li {
+      //   @include themed() {
+      //     background-color: t('primary-lighter');
+      //   }
+      // }
+
+    
       span {
         font-size: 12px;
       }

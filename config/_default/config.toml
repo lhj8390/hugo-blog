@@ -3,6 +3,7 @@ languageCode = "ko"
 DefaultContentLanguage = "ko"
 title = "Website of lhj8390"
 
+
 # theme as hugo module
 #theme = "github.com/lxndrblz/anatole"
 # theme as git submodule
@@ -24,6 +25,8 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "monokai"
 
+[outputs]
+    home = [ "HTML", "RSS", "JSON"]
 [markup]
     [markup.goldmark]
         [markup.goldmark.renderer]
