@@ -17,4 +17,59 @@
   &::before {
     content: '#';
   }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px 20px;
+    margin-bottom: 50px;
+    border-radius: 2px;
+
+    @include themed() {
+      color: t('accent') !important;
+      background: t('primary-light');
+    }
+
+    &:hover {
+      cursor: pointer;
+      
+      @include themed() {
+        color: t('primary') !important;
+        background: t('primary-lighter');
+      }
+    }
+  }
+}
+
+.tags {
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: hidden;
+  max-height: fit-content;
+  transition: 1s;
+
+  li {
+    border-radius: 4px;
+    padding: 8px 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.4rem;
+
+    @include themed() {
+      background: t('primary-lighter');
+    }
+
+    a {
+      font-size: 1.4rem;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  &.hide {
+    max-height: 15px;
+    
+  }
 }

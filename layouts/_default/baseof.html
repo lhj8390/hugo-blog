@@ -37,6 +37,23 @@
         {{ end }}
       >
         <header class="header">{{ partial "navbar.html" . }}</header>
+
+        <div class="{{ with .Site.Params.doNotLoadAnimations }}.
+        {{ else }}
+          animated fadeInDown
+        {{ end }}">
+          <ul id="tags" class="nav__list tags hide">
+          {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+            <li>
+              <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">#{{ $name }} <span>({{ .Count }})</span></a>
+            </li>
+    
+          {{ end }}
+        </ul>
+        <a class="tag__btn" onclick="openTagList(this);">태그 펼치기</a>
+
+        </div>
+        
         {{- block "main" . }}{{- end }}
       </main>
     </div>
@@ -49,4 +66,20 @@
 
     {{- end -}}
   </body>
+  <script>
+    const openTagList = function (el) {
+      var tags = document.getElementById('tags');
+    
+      if (document.querySelector('.tags').classList.contains('hide')) {
+        tags.style.maxHeight = tags.scrollHeight + "px";
+        el.innerHTML = "태그 접기";
+      }
+      else {
+        tags.style.maxHeight = "15px";
+        el.innerHTML = "태그 펼치기";
+      }
+      document.querySelector('.tags').classList.toggle('hide');
+    }
+    
+  </script>
 </html>
