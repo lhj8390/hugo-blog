@@ -1,4 +1,18 @@
 {{ define "main" }}
+  <div class="{{ with .Site.Params.doNotLoadAnimations }}.
+    {{ else }}
+      animated fadeInDown
+    {{ end }}">
+    <ul id="tags" class="nav__list tags hide">
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <li>
+          <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">#{{ $name }} <span>({{ .Count }})</span></a>
+        </li>
+      {{ end }}
+    </ul>
+    <a class="tag__btn" onclick="openTagList(this);">태그 펼치기</a>
+
+  </div>
   <div
     class="post {{ with .Site.Params.doNotLoadAnimations }}
       .
