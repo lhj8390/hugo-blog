@@ -64,13 +64,13 @@
       text-align: center;
       background-color: transparent;
 
-      // li {
-      //   @include themed() {
-      //     background-color: t('primary-lighter');
-      //   }
-      // }
-
-    
+      @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 30px;
+      }
+      
       span {
         font-size: 12px;
       }

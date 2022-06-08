@@ -46,8 +46,14 @@
   flex-wrap: wrap;
   gap: 10px;
   overflow: hidden;
-  max-height: fit-content;
   transition: 1s;
+
+  @include mobile {
+    display: flex;
+    background-color: t('accent') !important;
+    max-height: fit-content;
+    justify-content: center;
+  }
 
   li {
     border-radius: 4px;
@@ -69,7 +75,12 @@
   }
 
   &.hide {
-    max-height: 15px;
+    @include desktop {
+      max-height: 15px;
+    }
     
+    @include mobile {
+      max-height: 40px;
+    }
   }
 }

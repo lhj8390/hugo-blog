@@ -67,15 +67,32 @@
     {{- end -}}
   </body>
   <script>
+    const tags = document.getElementById('tags');
+    const tagBtn = document.getElementsByClassName('tag__btn')[0];
+
+    window.addEventListener('resize', function() {
+      let height = window.innerWidth >= 961 ? 15 : 40;
+      
+      if (window.innerWidth >= 961 && tags.scrollHeight <= 80) {        // 브라우저 해상도
+        tagBtn.style.display = "none";
+      } 
+      else if (window.innerWidth <= 961 && tags.scrollHeight <= 32) {   // 모바일 해상도
+        tagBtn.style.display = "none";
+      }
+      else {
+        tagBtn.style.display = "flex";  
+      }
+    });
+
     const openTagList = function (el) {
-      var tags = document.getElementById('tags');
+      let height = window.innerWidth >= 961 ? 15 : 40;
     
       if (document.querySelector('.tags').classList.contains('hide')) {
         tags.style.maxHeight = tags.scrollHeight + "px";
         el.innerHTML = "태그 접기";
       }
       else {
-        tags.style.maxHeight = "15px";
+        tags.style.maxHeight = height + "px";
         el.innerHTML = "태그 펼치기";
       }
       document.querySelector('.tags').classList.toggle('hide');
