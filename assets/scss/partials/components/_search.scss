@@ -32,7 +32,6 @@
     left: 0;
     top: 75px;
     max-height: 50vh;
-    overflow: scroll;
 
     @include themed() {
         background-color: t('primary-lighter');
