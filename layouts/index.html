@@ -3,8 +3,33 @@
     {{ else }}
       animated fadeInDown
     {{ end }}">
+
+    <div class="main__content">
+      <img src="https://ghchart.rshah.org/lhj8390"/>
+
+    </div>
+    <div class="main__content">
+      <h2>시리즈</h2><hr>
+      <ul class="nav__list grid">
+        {{ range $name, $taxonomy := .Site.Taxonomies.series }}
+          <li>
+            <div class="main__thumbnail-wrapper">
+              
+              <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">
+                
+                
+              </a>
+              
+            </div>
+          </li>
+          <div class="description">
+            {{ $name }} <span>({{ .Count }})</span>
+          </div>
+        {{ end }}
+      </ul>
+      
+    </div>
     
-    <img src="https://ghchart.rshah.org/lhj8390"/>
   </div>
   
 {{ end }}

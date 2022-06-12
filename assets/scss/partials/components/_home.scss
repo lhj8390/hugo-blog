@@ -1,0 +1,61 @@
+.main {
+    margin: 30px;   
+
+
+    &__content {
+        margin: 30px 0;
+
+        h2 {
+            $font-size-h2: 2.4rem;
+      
+            font-size: $font-size-h2;
+            font-weight: 600;
+            letter-spacing: 1px;
+            line-height: 1;
+      
+            a {
+              font-size: $font-size-h2;
+      
+              @include themed() {
+                color: t('primary');
+              }
+            }
+        }
+
+    
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                padding: 10px;
+                padding-bottom: 20px;
+                margin-top: 0 !important;
+                box-sizing: border-box;
+            }
+        }
+        
+    }
+    
+    &__thumbnail {
+        width: 100%;
+        height: $thumbnail-height;
+        object-fit: cover;
+        display: block;
+    
+        &-wrapper {
+          border-radius: 2px;
+          width: 100%;
+          margin-bottom: 1em;
+          overflow: hidden;
+          transition: box-shadow 0.3s ease;
+    
+          @include themed() {
+            box-shadow: t('shadow');
+          }
+        }
+      }
+}

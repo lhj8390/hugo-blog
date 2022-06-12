@@ -33,7 +33,6 @@
           One can set `mainSections = [""]` and have the content/_index.md specified here
       -->
   </div>
-
   {{ if .Params.mainSectionsTitle }}
     <div
       class="post {{ with .Site.Params.doNotLoadAnimations }}
@@ -48,10 +47,9 @@
         <h2>{{ .Params.mainSectionsTitle }}</h2>
       </div>
     </div>
-
   {{ end }}
 
-  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+  {{ $paginator := .Paginate (where .Pages "Type" "post") }}
   {{ range $paginator.Pages }}
     <div
       class="post {{ with .Site.Params.doNotLoadAnimations }}
