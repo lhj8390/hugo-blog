@@ -12,19 +12,35 @@
       <h2>시리즈</h2><hr>
       <ul class="nav__list grid">
         {{ range $name, $taxonomy := .Site.Taxonomies.series }}
-          <li>
-            <div class="main__thumbnail-wrapper">
-              
-              <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">
+        
+        {{ $mainSection := index ($taxonomy.Pages) 0 }} 
+        
+          <li hugo-nav="{{ $mainSection.RelPermalink}}">
+            <div class="main__thumbnail">
+              {{ if $mainSection.Params.thumbnail }}
+                <img src="{{ $mainSection.Params.thumbnail }}" class="main__thumbnail-wrapper"/>
+              {{ else }}
+                {{ $image := replace $mainSection.RelPermalink  "/post/" "images/" }}
+                {{ $imageNm := strings.TrimRight "/" $image }}
+                {{ $thum := print $imageNm ".png"}}
+                {{ with $thum}}
+                  <img src="{{ . }}" class="main__thumbnail-wrapper"/>
+                {{ end }}
                 
-                
-              </a>
-              
+              {{ end }}
+            </div>
+            <div class="description">
+              <div class="title">
+                <a href="{{ "/series/" | relLangURL }}{{ $name | urlize }}/">
+                  {{ $name }} 
+                  
+                </a>
+              </div>
+              <div class="summary">
+                <span>{{ .Count }} 개의 시리즈</span>
+              </div>
             </div>
           </li>
-          <div class="description">
-            {{ $name }} <span>({{ .Count }})</span>
-          </div>
         {{ end }}
       </ul>
       
