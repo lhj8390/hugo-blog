@@ -5,7 +5,7 @@
     {{ end }}">
 
     <div class="main__content">
-      <img src="https://ghchart.rshah.org/lhj8390"/>
+      <img src="https://ghchart.rshah.org/lhj8390" class="history"/>
 
     </div>
     <div class="main__content">
@@ -17,6 +17,7 @@
         
           <li hugo-nav="{{ $mainSection.RelPermalink}}">
             <div class="main__thumbnail">
+              <a href="{{ "/series/" | relLangURL }}{{ $name | urlize }}/">
               {{ if $mainSection.Params.thumbnail }}
                 <img src="{{ $mainSection.Params.thumbnail }}" class="main__thumbnail-wrapper"/>
               {{ else }}
@@ -24,10 +25,10 @@
                 {{ $imageNm := strings.TrimRight "/" $image }}
                 {{ $thum := print $imageNm ".png"}}
                 {{ with $thum}}
-                  <img src="{{ . }}" class="main__thumbnail-wrapper"/>
+                  <img src="{{ . }}" class="main__thumbnail-wrapper" onerror="this.onerror=null; this.src='images/default-image.png';"/>
                 {{ end }}
-                
               {{ end }}
+              </a>
             </div>
             <div class="description">
               <div class="title">
