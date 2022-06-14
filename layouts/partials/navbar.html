@@ -1,5 +1,5 @@
 <div
-  class="{{ with .Site.Params.doNotLoadAnimations }}
+  class="menu {{ with .Site.Params.doNotLoadAnimations }}
     .
 
   {{ else }}
@@ -7,13 +7,32 @@
 
   {{ end }}"
 >
+<div id="searchbox">
+  <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default (printf "search") }}"
+      aria-label="search" type="search" autocomplete="off">
+  <ul id="searchResults" aria-label="search results"></ul>
+</div>
   <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
     <span aria-hidden="true" class="navbar-burger__line"></span>
     <span aria-hidden="true" class="navbar-burger__line"></span>
     <span aria-hidden="true" class="navbar-burger__line"></span>
   </a>
   <nav class="nav">
-    <ul class="nav__list" id="navMenu">
+    <!-- 모바일 전용 메뉴 --> 
+    <div class="nav__opener">
+      <ul class="nav__list" id="navMenu">
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+          <li class="nav__list-item">
+            <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} <span>({{ .Count }})</span></a>
+          </li>
+        {{ end }}
+        
+      </ul>
+    </div>
+    
+  </nav>
+  <nav class="nav nav--hidden">
+    <ul class="nav__list">
       {{ $url := .RelPermalink }}
       {{ range $menuId, $menuItem := .Site.Menus.main }}
         {{ $active := eq $url $menuItem.URL }}
@@ -112,11 +131,11 @@
 
       {{ end }}
       <li>
-        <div id="searchbox">
+        <!-- <div id="searchbox">
           <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default (printf "search") }}"
               aria-label="search" type="search" autocomplete="off">
           <ul id="searchResults" aria-label="search results"></ul>
-        </div>
+        </div> -->
       </li>
       {{ if not .Site.Params.disableThemeSwitcher }}
         <li class="nav__list-item">

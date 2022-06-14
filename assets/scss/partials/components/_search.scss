@@ -1,5 +1,8 @@
 #searchbox {
-    margin-right: 15px;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translate(0, -50%);
 
     input {
         padding: 4px 10px;
@@ -27,11 +30,10 @@
 #searchResults {
     margin: 10px 5px;
     padding: 0;
-    width: 100%;
+    width: 70vw;
     position: absolute;
-    left: 0;
-    top: 75px;
-    max-height: 50vh;
+    right: -3px;
+    top: 25px;
 
     @include themed() {
         background-color: t('primary-lighter');

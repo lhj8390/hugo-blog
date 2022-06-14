@@ -8,14 +8,14 @@
   padding: 6px;
   &__line {
     display: block;
-    height: 1px;
-    left: calc(50% - 8px);
+    height: 5px;
+    left: calc(50% - 15px);
     position: absolute;
     transform-origin: center;
     transition-duration: 86ms;
     transition-property: background-color, opacity, transform;
     transition-timing-function: ease-out;
-    width: 16px;
+    width: 30px;
 
     @include themed() {
       background-color: t('primary');
@@ -26,15 +26,39 @@
     }
 
     &:nth-child(2) {
-      top: calc(50% - 1px);
+      top: calc(50% + 3px);
     }
 
     &:nth-child(3) {
-      top: calc(50% + 4px);
+      top: calc(50% + 12px);
     }
   }
 
   @include desktop {
     display: none;
   }
+}
+
+.nav {
+
+  &__opener {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    z-index: 999;
+    transition-duration: 0.2s;
+    transition-property: right;
+    right: -500px;
+
+    .nav__list {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100%;
+      width: 400px;
+      padding: 25px 0;
+      box-sizing: border-box;
+    }
+
+  }
+
 }

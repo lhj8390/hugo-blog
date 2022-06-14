@@ -1,7 +1,7 @@
 .nav {
   $py-desktop: 24px;
 
-  display: none;
+  // display: none;
 
   @include desktop_and_print {
     display: flex;
@@ -65,7 +65,7 @@
       background-color: transparent;
 
       @include mobile {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 30px;
@@ -90,6 +90,20 @@
   }
 
   &--active {
-    display: block;
+    .nav__opener {
+      right: 0;
+    }
+  }
+
+  &--hidden {
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.menu {
+  @include mobile {
+    height: 3.5em;
   }
 }
