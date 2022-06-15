@@ -16,6 +16,13 @@
     {{ end }}
   >
     <div class="wrapper">
+      <div class="search search--wrapper" id="searchWrapper" style="display: none;" onclick="openSearchPopup(event);">
+        <div id="searchbox">
+          <input id="searchInput" autofocus placeholder="{{ .Params.placeholder | default (printf "search") }}"
+              aria-label="search" type="search" autocomplete="off">
+          <ul id="searchResults" aria-label="search results"></ul>
+        </div>
+      </div>
       <aside
         {{ if and (not .IsHome) (eq .Site.Params.hidesidebar true) }}
           class="wrapper__sidebar wrapper__sidebar--hidden"
@@ -51,35 +58,18 @@
     {{- end -}}
   </body>
   <script>
-    const tags = document.getElementById('tags');
-    const tagBtn = document.getElementsByClassName('tag__btn')[0];
-
-    window.addEventListener('resize', function() {
-      let height = window.innerWidth >= 961 ? 15 : 40;
+    const searchWrapper = document.getElementById('searchWrapper');
+  
+    const openSearchPopup = function (e) {
+      if (document.getElementById('searchInput') === e.target || document.getElementById('searchbox') === e.target)
+        return;
       
-      if (window.innerWidth >= 961 && tags.scrollHeight <= 80) {        // 브라우저 해상도
-        tagBtn.style.display = "none";
-      } 
-      else if (window.innerWidth <= 961 && tags.scrollHeight <= 32) {   // 모바일 해상도
-        tagBtn.style.display = "none";
-      }
-      else {
-        tagBtn.style.display = "flex";  
-      }
-    });
-
-    const openTagList = function (el) {
-      let height = window.innerWidth >= 961 ? 15 : 40;
+      if (searchWrapper.style.display == 'none') 
+        searchWrapper.style.display = 'block';
+      else
+        searchWrapper.style.display = 'none';
     
-      if (document.querySelector('.tags').classList.contains('hide')) {
-        tags.style.maxHeight = tags.scrollHeight + "px";
-        el.innerHTML = "태그 접기";
-      }
-      else {
-        tags.style.maxHeight = height + "px";
-        el.innerHTML = "태그 펼치기";
-      }
-      document.querySelector('.tags').classList.toggle('hide');
+      
     }
     
   </script>

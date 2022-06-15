@@ -106,4 +106,23 @@
   @include mobile {
     height: 3.5em;
   }
+
+  a[role=button] {
+    cursor: pointer;
+
+    @include mobile {
+      float: right;
+      line-height: 3.25em;
+    }
+
+    @include desktop {
+      position: absolute;
+      right: 50px;
+      line-height: 5em;
+    }
+    
+    &.search__icon {
+      margin-right: 10px;
+    }
+  }
 }

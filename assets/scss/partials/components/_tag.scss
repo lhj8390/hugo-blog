@@ -46,6 +46,7 @@
   flex-wrap: wrap;
   gap: 10px;
   overflow: hidden;
+  // width: calc(0.8 * 100%);
   transition: 1s;
 
   @include mobile {
