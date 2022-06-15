@@ -111,17 +111,17 @@
     cursor: pointer;
 
     @include mobile {
-      float: right;
-      line-height: 3.25em;
+      line-height: 3.5em;
     }
 
     @include desktop {
-      position: absolute;
-      right: 50px;
       line-height: 5em;
     }
     
     &.search__icon {
+      position: absolute;
+      top: 0;
+      right: 50px;
       margin-right: 10px;
     }
   }
