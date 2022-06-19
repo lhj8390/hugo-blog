@@ -1,6 +1,46 @@
 @charset "UTF-8";
 
 * {
+
+  ::-webkit-scrollbar{
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+
+    &-track {
+      background: #303030;
+      border: solid 2px rgba(33,33,33,0.5);
+    }
+
+    &-thumb {
+      background: #404040;
+
+      &:hover {
+        background: #505050;
+      }
+
+      &:active {
+        background: #404040;
+      }
+
+      &:vertical {
+        border-top: solid 2px rgba(33,33,33,0.5);
+        border-bottom: solid 2px rgba(33,33,33,0.5);
+      }
+
+      &:horizontal {
+        border-right: solid 2px rgba(33,33,33,0.5);
+        border-left: solid 2px rgba(33,33,33,0.5);
+      }
+    }
+
+    &-button {
+      border-style: solid;
+      height: 0;
+      width: 0;
+    }
+  } 
+
   @include ltr {
     font-family: 'Nanum Barun Gothic', sans-serif, monospace;
     font-size: 1.6rem;

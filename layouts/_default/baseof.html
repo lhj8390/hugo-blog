@@ -64,10 +64,15 @@
       if (document.getElementById('searchInput') === e.target || document.getElementById('searchbox') === e.target)
         return;
       
-      if (searchWrapper.style.display == 'none') 
+      if (searchWrapper.style.display == 'none') {
         searchWrapper.style.display = 'block';
-      else
+        document.getElementsByClassName('wrapper')[0].style.overflow = 'hidden';
+
+      }
+      else {
         searchWrapper.style.display = 'none';
+        document.getElementsByClassName('wrapper')[0].style.overflow = 'auto';
+      }
     
       
     }
