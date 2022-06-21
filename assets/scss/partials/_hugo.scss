@@ -14,6 +14,7 @@ a {
 
 blockquote {
   padding: 0 1em;
+  margin: 0.5rem;
 
   @include themed() {
     color: t('primary');

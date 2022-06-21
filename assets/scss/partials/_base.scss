@@ -3,8 +3,8 @@
 * {
 
   ::-webkit-scrollbar{
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
     box-sizing: border-box;
 
     &-track {
@@ -43,11 +43,11 @@
 
   @include ltr {
     font-family: 'Nanum Barun Gothic', sans-serif, monospace;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   @include rtl {
     font-family: 'Roboto Mono', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }

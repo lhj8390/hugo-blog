@@ -61,17 +61,18 @@
     const searchWrapper = document.getElementById('searchWrapper');
   
     const openSearchPopup = function (e) {
+      window.scrollTo(0, 0);
       if (document.getElementById('searchInput') === e.target || document.getElementById('searchbox') === e.target)
         return;
       
       if (searchWrapper.style.display == 'none') {
         searchWrapper.style.display = 'block';
-        document.getElementsByClassName('wrapper')[0].style.overflow = 'hidden';
+        document.getElementsByClassName('body')[0].style.overflow = 'hidden';
 
       }
       else {
         searchWrapper.style.display = 'none';
-        document.getElementsByClassName('wrapper')[0].style.overflow = 'auto';
+        document.getElementsByClassName('body')[0].style.overflow = 'auto';
       }
     
       

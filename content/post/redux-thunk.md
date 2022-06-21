@@ -17,13 +17,14 @@ categories = ["React.js"]
 > Redux 미들웨어를 사용하면 액션이 dispatch 된 다음, 리듀서에서 해당 액션을 받아와 업데이트하기 전에 추가적인 작업을 할 수 있다.
 > 
 <br/>
-  💡 middleware란?
+<aside>
+💡 <strong>middleware란?</strong>
 
-    dispatch 함수를 결합해서 새 dispatch 함수를 반환하는 고차함수.
-    비동기 API 호출을 일련의 동기 action으로 바꾸는데 유용하다.
+  dispatch 함수를 결합해서 새 dispatch 함수를 반환하는 고차함수.
+  비동기 API 호출을 일련의 동기 action으로 바꾸는데 유용하다.
 
-    즉, 미들웨어는 redux 저장소의 action을 변형하는 기능으로, 미들웨어를 통해 redux에 새로운 기능을 추가하며, 네트워크 요청을 만드는데 도움이 된다.
- 
+  즉, 미들웨어는 redux 저장소의 action을 변형하는 기능으로, 미들웨어를 통해 redux에 새로운 기능을 추가하며, 네트워크 요청을 만드는데 도움이 된다.
+</aside>
 <br/>
 
 ## Redux-Thunk 사용 이유
@@ -54,12 +55,12 @@ Redux-thunk를 사용하지 않고 해당 코드로 action 호출 시 하단의 
 → 액션 생성함수는 오직 plain object 형태만 리턴해야 하는데, 위와 같이 비동기적인 코드에선 함수도 리턴하기 때문.
 
 <br/>
+<aside>
+❓  <strong>console에 찍어보면 객체인데??</strong>
 
-  ❓ console에 찍어보면 객체인데??
-
-    console에 찍히는 response 객체는 해당 함수가 종료되고 return되는 값으로 
-    리듀서로 dispatch되는 최초의 액션 형태는 plain이 아닌 async await 함수의 형태가 된다.
-
+  console에 찍히는 response 객체는 해당 함수가 종료되고 return되는 값으로 
+  리듀서로 dispatch되는 최초의 액션 형태는 plain이 아닌 async await 함수의 형태가 된다.
+</aside>
 <br/>
 
 ### promise로 호출
