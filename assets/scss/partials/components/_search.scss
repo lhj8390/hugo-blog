@@ -13,28 +13,24 @@
     display: flex;
     flex-direction: column;
     border-radius: 6px;
-    overflow: auto;
+    
 
     input {
-        padding: 10px 15px;
+        padding: 15px;
         font-weight: bold;
-        border: 0 solid black;
+        border: none;
         box-sizing: border-box;
-        border-radius: 5px;
-        margin: 10px;
-        position: sticky;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         z-index: 1;
 
         @include themed() {
             color: black;
-            border: 2px solid t('primary-light');
         }
 
         &:focus {
             outline: none;
-            @include themed() {
-                border-color: 2px solid t('primary-light');
-            }
+            
         }
     }
     
@@ -42,6 +38,7 @@
 
 #searchResults {
     margin: 10px 5px;
+    overflow: auto;
     padding: 0;
 
     @include themed() {
@@ -52,7 +49,6 @@
         list-style: none;
         border-radius: 5px;
         padding: 10px;
-        margin: 10px 0;
         position: relative;
         font-weight: 500;
 
@@ -62,12 +58,36 @@
         }
 
         &:hover {
-            transform: scale(0.98);
             @include themed() {
-                background-color: t('primary-light');
-                color: t('accent');
+                background-color: t('primary-light-highlight');
+                // background: rgba(159, 159, 159, 0.08);
             } 
         }
+
+        span {
+            &.post-categories {
+                color: #ffffff;
+                padding: 2px;
+                background-color: #808080;
+                margin-right: 5px;
+                border-radius: 3px;
+            }
+        }
+    }
+
+        p {
+            line-height: 30px;
+            max-height: 30px;
+            margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &.post-summary {
+                color: #909090;
+                margin: 5px 0;
+            }
+
     }
 
     a {
@@ -81,10 +101,8 @@
     }
 
     .focus {
-        transform: scale(0.98);
         @include themed() {
-            background-color: t('primary-light');
-            color: t('accent');
+            background-color: t('primary-light-highlight');
         } 
         
     }

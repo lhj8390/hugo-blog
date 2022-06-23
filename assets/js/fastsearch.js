@@ -84,8 +84,16 @@ sInput.onkeyup = function (e) {
             let resultSet = ''; // our results bucket
 
             for (let item in results) {
-                resultSet += `<li class="post-entry"><header class="entry-header">${results[item].item.title}<p>${results[item].item.summary}<p></header>` +
-                    `<a href="${results[item].item.permalink}"></a></li>`
+                const categoriesStr = results[item].item.categories.toString();
+                let categories = categoriesStr.split(',');
+
+                resultSet += `<li class="post-entry"><header class="entry-header"><p>${results[item].item.title}</p>` +
+                    `<p class="post-summary">${results[item].item.summary}</p>`;
+                    for (let idx in categories) {
+                        resultSet += `<span class="post-categories">${categories[idx]}</span>`
+                    }
+
+                resultSet += `</header><a href="${results[item].item.permalink}"></a></li>`
             }
 
             resList.innerHTML = resultSet;
