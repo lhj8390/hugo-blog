@@ -1,11 +1,15 @@
 ﻿{{ $related := .Site.RegularPages.Related . | first .Site.Params.numberOfRelatedPosts }}
 {{ with $related }}
-  <h3>Related Posts</h3>
-  <ul>
-    {{ range . }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+<div class="related">
+  <div class="related--list">
+    {{ range  $index, $value := . }}
+      {{ if not $index }}
+        <a href="{{ .RelPermalink }}"><span>이전 게시물</span> <p>{{ .Title }}</p></a>
+      {{ else }}
+        <a href="{{ .RelPermalink }}"><span>다음 게시물</span> <p>{{ .Title }}</p></a>
+      {{ end }}
 
     {{ end }}
-  </ul>
-
+  </div>
+</div>
 {{ end }}

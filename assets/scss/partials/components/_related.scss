@@ -1,0 +1,40 @@
+.related {
+
+    margin: 3em 0;
+
+    &--list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+
+        a {
+            padding: 20px 30px;
+            border-radius: 3px;
+            color: white !important;
+            min-width: 150px;
+            
+            @include themed() {
+                background-color: t('primary-light');
+            }
+
+            span {
+                color: black;
+                font-weight: 600;
+                display: block;
+            }
+
+            p {
+                margin: 0;
+                margin-top: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}
