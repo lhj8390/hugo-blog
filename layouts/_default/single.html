@@ -14,6 +14,12 @@
       </div>
 
     {{ end }}
+
+    <div class="post__toc" id="tableOfContent">
+      <h3>Table of Contents</h3>
+      {{ .TableOfContents }}
+    </div>
+    
     <div class="post__content">
       <h1>{{ title .Title }}</h1>
       {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) }}
@@ -41,14 +47,7 @@
       {{ end }}
 
       {{- partial "expirationnote.html" . -}}
-
-      {{- if (eq .Params.toc true) -}}
-        <h3>Table of Contents</h3>
-        {{ .TableOfContents }}
-
-
-      {{- end -}}
-
+        
       {{ .Content }}
 
       {{- if isset .Params "series" -}}
@@ -122,5 +121,32 @@
 
     {{ end }}
   </div>
+
+  <script>
+    const toc = document.getElementById('tableOfContent');
+
+    window.addEventListener('resize', function() {
+      
+      if (window.innerWidth >= 1520) {        // 브라우저 해상도
+        toc.style.display = "block";
+      } 
+      else {
+        toc.style.display = "none";  
+      }
+    });
+
+    var link = document.querySelectorAll('a[href*="#"]')
+
+    for (i = 0; i < link.length; i++) {
+      link[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        let id = decodeURI(this.href.split('/')[5].split('#')[1]);
+        const target = document.getElementById(id);
+        
+        window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
+      });
+    }
+    
+  </script>
 
 {{ end }}

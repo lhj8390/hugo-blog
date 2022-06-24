@@ -58,7 +58,27 @@
     }
   }
 
+  &__toc {
+    float: right;
+    position: sticky;
+    top: 100px;
+    max-width: 250px;
+
+    a {
+
+      @include themed() {
+        color: t('primary') !important;
+      }
+      
+
+      &:hover {
+        color: #adadad !important;
+      }
+    }
+  }
+
   &__content {
+    width: 900px;
     a {
       @include themed() {
         color: t('info');
