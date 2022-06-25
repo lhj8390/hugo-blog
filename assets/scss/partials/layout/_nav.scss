@@ -61,8 +61,9 @@
       line-height: 30px;
       max-height: 400px;
       overflow: auto;
-      text-align: center;
       background-color: transparent;
+      margin-top: 20px;
+      padding: 0;
 
       @include mobile {
         display: none;
@@ -74,6 +75,71 @@
       span {
         font-size: 12px;
       }
+
+      a {
+        display: block;
+        padding: 5px 15px;
+        
+        i {
+          padding-right: 10px;
+        }
+        
+        &:hover {
+          color: white;
+        }
+
+        &.watched {
+          background-color: #2f303e;
+        }
+      }
+
+      .icon {
+        float: right;
+        position: relative;
+        text-align: right;
+        width: 100px;
+        z-index: 3;
+
+        &:hover {
+          color: #5e5e5e;
+        }  
+        &.down {
+          i::before {
+            font: var(--fa-font-solid);
+            content: "\f107";
+          }
+        }
+        &.up {
+          i::before {
+            font: var(--fa-font-solid);
+            content: "\f106";
+          }
+        }
+
+      }
+      
+
+      .expand {
+        &__list {
+          max-height: 0px;
+          transition: max-height 300ms ease-out;
+          overflow: hidden;
+          background-color: #292929;
+
+          a {
+            padding-left: 40px;
+            &:hover {
+              color: #a3a3a3;
+            }
+          }
+        }
+
+        &--open {
+          transition: max-height 300ms ease-in;
+          max-height: 400px;
+        }
+      }
+
     }
   }
 

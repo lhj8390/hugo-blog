@@ -98,11 +98,14 @@
 
           {{ end }}</span
         >
-        {{ with .Page.Params.Categories }}
+        <!-- {{ with .Page.Params.Categories }}
           {{ partial "taxonomy/categories.html" . }}
-
-
         {{ end }}
+        <span>-</span> -->
+        {{ with .Page.Params.SubCategories }}
+          {{ partial "taxonomy/subcategories.html" . }}
+        {{ end }}
+
 
         {{ with .Page.Params.Tags }}
           {{ partial "taxonomy/tags.html" . }}

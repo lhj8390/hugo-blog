@@ -27,8 +27,9 @@
     @include desktop_and_print {
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       flex-grow: 1;
-      justify-content: center;
+      margin-top: 50px;
     }
   }
 

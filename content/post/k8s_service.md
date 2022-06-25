@@ -6,8 +6,9 @@ description = "쿠버네티스의 서비스 개념 및 종류에 대해 설명�
 tags = ["DevOps", "server", "docker", "kubernetes", "k8s"]
 series = ["쿠버네티스 개념"]
 categories = [
-    "Kubernetes"
+    "DevOps"
 ]
+subcategories = ["kubernetes"]
 +++
 
 # 서비스

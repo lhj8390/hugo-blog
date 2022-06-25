@@ -47,6 +47,7 @@ pygmentsStyle = "monokai"
 
 [taxonomies]
     category = "categories"
+    subcategory = "subcategories"
     series = "series"
     tag = "tags"
 

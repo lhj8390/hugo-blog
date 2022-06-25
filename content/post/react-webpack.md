@@ -5,7 +5,8 @@ author = "lhj8390"
 description = "React 초기 설정인 Webpack 기본 개념 및 초기 설정에 대해 설명한다."
 date = "2022-06-05"
 tags = ["frontend", "webpack", "react.js"]
-categories = ["React.js"]
+categories = ["frontend"]
+subcategories = ["React.js"]
 +++
 
 ## 웹팩(Webpack)이란?

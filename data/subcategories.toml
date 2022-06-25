@@ -1,0 +1,2 @@
+devops = ["kubernetes"]
+frontend = ["react.js"]
