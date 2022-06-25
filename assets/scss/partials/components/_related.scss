@@ -11,17 +11,21 @@
         a {
             padding: 20px 30px;
             border-radius: 3px;
-            color: white !important;
             min-width: 150px;
             
             @include themed() {
-                background-color: t('primary-light');
+                background-color: t('callout');
+                color: t('primary') !important;
             }
 
             span {
                 color: black;
                 font-weight: 600;
                 display: block;
+
+                i {
+                    padding: 0 10px;
+                }
             }
 
             p {

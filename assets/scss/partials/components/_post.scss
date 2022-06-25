@@ -79,7 +79,11 @@
   }
 
   &__content {
-    width: 900px;
+    
+    &.detail {
+      width: 900px;
+    }
+
     a {
       @include themed() {
         color: t('info');

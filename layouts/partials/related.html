@@ -4,9 +4,9 @@
   <div class="related--list">
     {{ range  $index, $value := . }}
       {{ if not $index }}
-        <a href="{{ .RelPermalink }}"><span>이전 게시물</span> <p>{{ .Title }}</p></a>
+        <a href="{{ .RelPermalink }}"><span><i class="fa-solid fa-angle-left"></i>이전 게시물</span> <p>{{ .Title }}</p></a>
       {{ else }}
-        <a href="{{ .RelPermalink }}"><span>다음 게시물</span> <p>{{ .Title }}</p></a>
+        <a href="{{ .RelPermalink }}"><span>다음 게시물<i class="fa-solid fa-angle-right"></i></span> <p>{{ .Title }}</p></a>
       {{ end }}
 
     {{ end }}

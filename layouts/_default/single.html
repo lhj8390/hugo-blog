@@ -20,7 +20,7 @@
       {{ .TableOfContents }}
     </div>
     
-    <div class="post__content">
+    <div class="post__content detail">
       <h1>{{ title .Title }}</h1>
       {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) }}
         <ul class="post__meta">
@@ -142,7 +142,7 @@
         e.preventDefault();
         let id = decodeURI(this.href.split('/')[5].split('#')[1]);
         const target = document.getElementById(id);
-        
+
         window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
       });
     }
