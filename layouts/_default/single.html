@@ -125,15 +125,17 @@
   <script>
     const toc = document.getElementById('tableOfContent');
 
-    window.addEventListener('resize', function() {
-      
+    const displayTocFromSize = function () {
       if (window.innerWidth >= 1520) {        // 브라우저 해상도
         toc.style.display = "block";
       } 
       else {
         toc.style.display = "none";  
       }
-    });
+    }
+
+    displayTocFromSize();
+    window.addEventListener('resize', displayTocFromSize);
 
     var link = document.querySelectorAll('a[href*="#"]')
 

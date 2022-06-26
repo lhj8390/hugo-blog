@@ -82,6 +82,11 @@
     
     &.detail {
       width: 900px;
+
+      @include mobile {
+        width: auto;
+      }
+      
     }
 
     a {
