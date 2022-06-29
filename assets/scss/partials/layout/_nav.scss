@@ -89,7 +89,7 @@
         }
 
         &.watched {
-          background-color: #2f303e;
+          background-color: #2a4456;
         }
       }
 
@@ -97,7 +97,7 @@
         float: right;
         position: relative;
         text-align: right;
-        width: 100px;
+        width: 20%;
         z-index: 3;
 
         &:hover {
@@ -124,7 +124,7 @@
           max-height: 0px;
           transition: max-height 300ms ease-out;
           overflow: hidden;
-          background-color: #292929;
+          background-color: #1c2a34;
 
           a {
             padding-left: 40px;

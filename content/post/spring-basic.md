@@ -4,9 +4,10 @@ title = "[스프링인액션] 스프링 초기 설정"
 author = "lhj8390"
 description = "스프링부트 초기의 gradle 빌드 명세, 부트스트랩(구동) 클래스, DevTools에 대해 설명한다."
 date = "2022-06-05"
-tags = ["frontend", "webpack", "react.js"]
-categories = ["frontend"]
-subcategories = ["React.js"]
+tags = ["spring", "web", "java"]
+categories = ["Framework"]
+subcategories = ["Spring"]
+series = ["스프링인액션"]
 +++
 
 ## 개요
