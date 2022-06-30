@@ -13,7 +13,7 @@
       <ul class="nav__list grid">
         {{ range $name, $taxonomy := .Site.Taxonomies.series }}
         
-        {{ $mainSection := index ($taxonomy.Pages) 0 }} 
+        {{ $mainSection := index ($taxonomy.Pages.ByDate) 0 }} 
         
           <li hugo-nav="{{ $mainSection.RelPermalink}}">
             <div class="main__thumbnail">
