@@ -3,34 +3,25 @@
 * {
 
   ::-webkit-scrollbar{
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     box-sizing: border-box;
 
     &-track {
-      background: #303030;
-      border: solid 2px rgba(33,33,33,0.5);
+      @include themed() {
+        background: t('accent');
+      }
     }
 
     &-thumb {
-      background: #404040;
-
+      background: #c2c2c2;
+      border-radius: 1px;
       &:hover {
-        background: #505050;
+        background: #808080;
       }
 
       &:active {
-        background: #404040;
-      }
-
-      &:vertical {
-        border-top: solid 2px rgba(33,33,33,0.5);
-        border-bottom: solid 2px rgba(33,33,33,0.5);
-      }
-
-      &:horizontal {
-        border-right: solid 2px rgba(33,33,33,0.5);
-        border-left: solid 2px rgba(33,33,33,0.5);
+        background: #747474;
       }
     }
 
