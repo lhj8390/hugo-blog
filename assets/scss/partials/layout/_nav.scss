@@ -85,11 +85,15 @@
         }
         
         &:hover {
-          color: white;
+          @include themed() {
+            color: t('primary');
+          }
         }
 
         &.watched {
-          background-color: #2a4456;
+          @include themed() {
+            background-color: t('nav-target');
+          }
         }
       }
 
@@ -101,7 +105,9 @@
         z-index: 3;
 
         &:hover {
-          color: #5e5e5e;
+          @include themed() {
+            color: t('nav');
+          }
         }  
         &.down {
           i::before {
@@ -124,8 +130,9 @@
           max-height: 0px;
           transition: max-height 300ms ease-out;
           overflow: hidden;
-          background-color: #1c2a34;
-
+          @include themed() {
+            background-color: t('nav-expand');
+          }
           a {
             padding-left: 40px;
             &:hover {

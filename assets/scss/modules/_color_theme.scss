@@ -13,6 +13,9 @@ $themes: (
     warning: $warning,
     danger: $danger,
     callout: $callout--lightmode,
+    nav: $nav--lightmode,
+    nav-target: $nav-target--lightmode,
+    nav-expand: $nav-expand--lightmode,
   ),
   dark: (
     accent: $accent--darkmode,
@@ -28,6 +31,9 @@ $themes: (
     warning: $warning,
     danger: $danger,
     callout: $callout--darkmode,
+    nav: $nav--darkmode,
+    nav-target: $nav-target--darkmode,
+    nav-expand: $nav-expand--darkmode,
   ),
 );
 
