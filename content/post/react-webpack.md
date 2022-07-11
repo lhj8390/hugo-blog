@@ -125,11 +125,11 @@ proxy를 통해 /api로 접근하면 http://localhost:8000 서버에서 해당 �
 <br /><br />
 
 <aside>
-💡 CORS 에러?
+💡 <strong>CORS 에러?</strong>
 
-     개발 편의상 로컬에 webpack-dev-server를 띄어놓는 경우가 많은데,
-     보통 다른 도메인에서 요청을 보낼 경우 브라우저 보안으로 인해 CORS 에러가 발생한다.
-     하지만 프록시 설정을 할 경우 같은 도메인에서 온 요청으로 인식하여 CORS 에러가 나지 않는다.
+  개발 편의상 로컬에 webpack-dev-server를 띄어놓는 경우가 많은데,
+  보통 다른 도메인에서 요청을 보낼 경우 브라우저 보안으로 인해 CORS 에러가 발생한다.
+  하지만 프록시 설정을 할 경우 같은 도메인에서 온 요청으로 인식하여 CORS 에러가 나지 않는다.
 
 </aside>
 <br /><br />
@@ -138,8 +138,7 @@ proxy를 통해 /api로 접근하면 http://localhost:8000 서버에서 해당 �
 
 ---
 
-```json
-
+```javascript
 "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "start": "webpack-dev-server --config ./webpack.config.js"

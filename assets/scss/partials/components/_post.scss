@@ -205,6 +205,28 @@
       letter-spacing: 0.6px;
     }
 
+    span {
+      &.red {
+        color: tomato;
+      }
+
+      &.bg_r {
+        background-color: tomato;
+        color: white;
+        margin: 0 1px;
+        padding: 1px 3px;
+        border-radius: 2px;
+      }
+
+      &.bg_y {
+        background-color: lemonchiffon;
+        color: black;
+        margin: 0 1px;
+        padding: 1px 3px;
+        border-radius: 2px;
+      }
+    }
+
     ul,
     ol {
       line-height: 1.9em;
