@@ -173,7 +173,7 @@
       font-weight: 600;
       letter-spacing: 1px;
       line-height: 1;
-      margin-top: 1.5em;
+      margin-top: 2.5em;
 
       a {
         font-size: $font-size-h2;
@@ -190,7 +190,7 @@
       font-weight: 600;
       letter-spacing: 1px;
       line-height: 1;
-      margin-top: 1.2em;
+      margin-top: 2em;
 
       a {
         font-size: $font-size-h3;
@@ -198,6 +198,10 @@
         @include themed() {
           color: t('primary');
         }
+      }
+
+      strong {
+        font-size: $font-size-h3;
       }
     }
 
@@ -208,6 +212,10 @@
     span {
       &.red {
         color: tomato;
+      }
+
+      &.gray {
+        color: #adabab;
       }
 
       &.bg_r {
@@ -224,6 +232,30 @@
         margin: 0 1px;
         padding: 1px 3px;
         border-radius: 2px;
+      }
+
+      &.it {
+        font-style: italic;
+      }
+    }
+
+    table {
+      tr {
+        * {
+          padding: 10px 5px;
+        }
+
+        th {
+          @include themed() {
+            background-color: t('primary-lighter');
+          }
+        }
+
+        td {
+          @include themed() {
+            border-bottom: 1px solid t('primary-light-highlight');
+          }
+        }
       }
     }
 
