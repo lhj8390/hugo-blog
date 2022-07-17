@@ -232,7 +232,7 @@ public class User implements UserDetails {
 
 - getAuthorities() : 사용자에게 부여된 권한을 저장한 컬렉션을 반환하는 메서드이다.
 - isAccountNonExpired(), isAccountNonLocked(), isCredentialsNonExpired(), isEnabled() : 사용자 계정의 활성화, 비활성화 여부를 나타내는 메서드이다.
-<br/>
+<br/><br/>
 
 **사용자 명세 서비스 생성하기**
 
@@ -396,6 +396,7 @@ protected void configure(HttpSecurity http) throws Exception {
 ```
 
 authorizeRequests() 메서드를 통해 /design 과 /order 페이지의 요청은 ROLE_USER의 권한을 갖는 사용자만 접근 가능하도록 허용하고 이외의 요청은 모든 사용자에게 허용하였다.
+<br/><br/>
 
 **요청 경로가 보안 처리되는 방법을 정의하는 메소드**
 
@@ -414,6 +415,9 @@ authorizeRequests() 메서드를 통해 /design 과 /order 페이지의 요청�
 | not() | 다른 접근 메서드들의 효력을 무효화한다. |
 | permitAll() | 무조건 접근을 허용한다. |
 | rememberMe() | 이전 로그인 정보를 쿠키나 데이터베이스로 저장한 후 일정 기간내에 재 접근하여 자동 로그인 된 사용자의 접근을 허용한다. |
+
+
+<br/>
 
 ### 로그인 페이지 경로 지정하기
 
@@ -443,6 +447,7 @@ formLogin() 메서드를 통해 로그인 폼을 구성하겠다고 명시하고
  ※ 스프링 시큐리티는 기본적으로 사용자가 머물던 페이지로 이동하는데, 강제적으로 페이지 경로를 지정할 경우에는 **defaultSuccessUrl(”페이지 경로”, true)** 로 지정해준다.
 - **usrenameParameter**() : 로그인 폼에서 기본 사용자 이름 필드 이름은 “username”이다. 이 필드 이름을 변경할 경우 사용한다.
 - **passwordParameter**() : 로그인 폼에서 기본 비밀번호 필드 이름은 “password”이다. 이 필드 이름을 변경할 경우 사용한다.
+<br/>
 
 ### 로그아웃 페이지 경로 지정하기
 

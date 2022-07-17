@@ -173,7 +173,7 @@
       font-weight: 600;
       letter-spacing: 1px;
       line-height: 1;
-      margin-top: 2.5em;
+      margin-top: 3em;
 
       a {
         font-size: $font-size-h2;
@@ -190,7 +190,7 @@
       font-weight: 600;
       letter-spacing: 1px;
       line-height: 1;
-      margin-top: 2em;
+      margin-top: 2.5em;
 
       a {
         font-size: $font-size-h3;
@@ -207,6 +207,10 @@
 
     p {
       letter-spacing: 0.6px;
+
+      strong {
+        margin-top: 2.5em;
+      }  
     }
 
     span {
