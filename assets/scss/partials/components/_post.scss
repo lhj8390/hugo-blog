@@ -241,6 +241,11 @@
       &.it {
         font-style: italic;
       }
+
+      &.ul {
+        text-decoration: underline;
+        text-underline-position: under;
+      }
     }
 
     table {
