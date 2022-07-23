@@ -62,16 +62,18 @@
           </div>
         </a>
         {{ if isset $list $value.Name }}
-          {{ range $subKey, $subValue := (index $list $value.Name) }}
+        
             <div class="expand__list">
+              {{ range $subKey, $subValue := (index $list $value.Name) }}
               <a href="/subcategories/{{ $subValue | urlize }}" class="{{ if in $url (lower $subValue) }} watched {{ end }}">
                 {{ if isset $icon $subValue }}
                   <i class="{{ index $icon $subValue}}"></i>
                 {{ end }}
                 {{ humanize $subValue }}
               </a>
+              {{ end }}
             </div>
-          {{ end }}
+         
         {{ end }}
       {{ end }}
     </div>
@@ -92,12 +94,17 @@
 
   const expands = document.querySelectorAll('.expand__list');
   for (i = 0; i < expands.length; i++) {
-    const classes = expands[i].firstElementChild.classList;
+    const nodes = expands[i].children;
     const icon = expands[i].previousElementSibling.lastElementChild;
-    if (classes.contains('watched')) {
-      icon.classList.add('up');
-      icon.classList.add('down');
-      expands[i].classList.add('expand--open');
+
+    for (j = 0; j < nodes.length; j++) {
+      if (nodes[j].classList.contains('watched')) {
+        icon.classList.add('up');
+        icon.classList.add('down');
+        expands[i].classList.add('expand--open');
+        break;
+      }
     }
+    
   }
 </script>
