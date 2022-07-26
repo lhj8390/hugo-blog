@@ -8,6 +8,7 @@ tags = ["spring", "web", "java", "spring boot"]
 categories = ["Framework"]
 subcategories = ["Spring"]
 series = ["스프링인액션"]
+folder = "spring"
 +++
 
 ## 개요

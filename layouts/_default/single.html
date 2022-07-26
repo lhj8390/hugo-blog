@@ -142,7 +142,7 @@
     for (i = 0; i < link.length; i++) {
       link[i].addEventListener('click', function(e) {
         e.preventDefault();
-        let id = decodeURI(this.href.split('/')[5].split('#')[1]);
+        let id = decodeURI(this.href.split('/')[6].split('#')[1]);
         const target = document.getElementById(id);
 
         window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });

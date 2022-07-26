@@ -21,7 +21,9 @@
               {{ if $mainSection.Params.thumbnail }}
                 <img src="{{ $mainSection.Params.thumbnail }}" class="main__thumbnail-wrapper"/>
               {{ else }}
-                {{ $image := replace $mainSection.RelPermalink  "/post/" "images/" }}
+                {{ $parse := print "/post/" $mainSection.Params.folder }}
+                {{ $image := replace $mainSection.RelPermalink  $parse "images/" }}
+                
                 {{ $imageNm := strings.TrimRight "/" $image }}
                 {{ $thum := print $imageNm ".png"}}
                 {{ with $thum}}

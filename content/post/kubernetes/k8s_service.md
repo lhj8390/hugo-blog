@@ -9,6 +9,7 @@ categories = [
     "DevOps"
 ]
 subcategories = ["kubernetes"]
+folder = "kubernetes"
 +++
 
 ## 서비스의 개념
