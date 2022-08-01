@@ -57,8 +57,49 @@
       width: 400px;
       padding: 25px 0;
       box-sizing: border-box;
+
+      &-item {
+        line-height: 30px;
+      }
+
+      a {
+        display: block;
+        padding: 5px 15px;
+
+        &.watched {
+          @include themed() {
+            background-color: #373840;
+          }
+        }
+
+        i {
+          padding-right: 5px;
+        }
+      }
     }
 
+  }
+
+  .expand {
+    &__list {
+      max-height: 0px;
+      transition: max-height 300ms ease-out;
+      overflow: hidden;
+      background-color: #3c3939;
+      
+      a {
+        text-align: center;
+        line-height: 30px;
+        &:hover {
+          color: #a3a3a3;
+        }
+      }
+    }
+
+    &--open {
+      transition: max-height 300ms ease-in;
+      max-height: 400px;
+    }
   }
 
 }

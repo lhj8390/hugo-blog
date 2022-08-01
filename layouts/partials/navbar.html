@@ -19,14 +19,39 @@
   <nav class="nav">
     <!-- 모바일 전용 메뉴 --> 
     <div class="nav__opener">
-      <ul class="nav__list" id="navMenu">
-        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <div class="nav__list" id="navMenu">
+        <!-- {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
           <li class="nav__list-item">
             <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }} <span>({{ .Count }})</span></a>
           </li>
+        {{ end }} -->
+        {{ $url := string .Permalink }}
+        {{ $list := ( index .Site.Data.subcategories ) }}
+        {{ $icon := .Site.Data.category_icon }}
+        {{ range $key, $value := .Site.Taxonomies.categories.Alphabetical }}
+          <a class="nav__list-item{{ if in $url (lower $value.Name) }} watched {{ end }}" onclick="openMenu(this);">
+            {{ if isset $icon $value.Name }}
+              <i class="{{ index $icon $value.Name}}"></i>
+            {{ end }}
+            {{ humanize $value.Name }} 
+            <span>({{ .Count }})</span>
+          </a>
+          {{ if isset $list $value.Name }}
+          
+              <div class="expand__list">
+                {{ range $subKey, $subValue := (index $list $value.Name) }}
+                <a href="/subcategories/{{ $subValue | urlize }}" class="{{ if in $url (lower $subValue) }} watched {{ end }}">
+                  {{ if isset $icon $subValue }}
+                    <i class="{{ index $icon $subValue}}"></i>
+                  {{ end }}
+                  {{ humanize $subValue }}
+                </a>
+                {{ end }}
+              </div>
+          
+          {{ end }}
         {{ end }}
-        
-      </ul>
+      </div>
     </div>
     
   </nav>
@@ -149,5 +174,4 @@
     </ul>
   </nav>
 </div>
-
 
