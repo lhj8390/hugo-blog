@@ -61,7 +61,7 @@
       {{ end }}"
     >
       {{ if .Params.thumbnail }}
-        <div class="post__thumbnail-wrapper">
+        <div class="post__thumbnail-wrapper-main">
           <a href="{{ .RelPermalink }}">
             <img class="post__thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image" loading="lazy" />
           </a>
