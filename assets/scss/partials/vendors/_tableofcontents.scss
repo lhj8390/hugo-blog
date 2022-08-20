@@ -5,7 +5,7 @@
 
 #TableOfContents ul {
   list-style: none;
-  line-height: 1.9em;
+  line-height: 1.6em;
   margin: 0;
 }
 
@@ -15,6 +15,7 @@
 
 #TableOfContents li a {
   display: inherit;
+  font-size: 1.3rem;
   color: $info;
 }
 
