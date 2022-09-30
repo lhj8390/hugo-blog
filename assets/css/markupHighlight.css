@@ -135,7 +135,7 @@ body.theme--dark {
   background-color: var(--chr-def-bg-color);
 }
 .chroma * {
-  font-family: 'Fira Code';
+  font-family: 'Consolas';
 }
 /* Other */
 .chroma .x {
