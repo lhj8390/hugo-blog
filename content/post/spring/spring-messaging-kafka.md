@@ -4,7 +4,7 @@ title = "[스프링인액션] 비동기 메시지 전송하기 - Kafka"
 author = "lhj8390"
 description = "스프링에서 Kafka를 사용하여 비동기 메시지를 전송하는 방법에 대해 설명한다."
 date = "2022-08-11"
-tags = ["spring", "web", "java", "spring boot"]
+tags = ["spring", "web", "java", "spring boot", "kafka"]
 categories = ["Framework"]
 subcategories = ["Spring"]
 series = ["스프링인액션"]
@@ -141,7 +141,7 @@ public void handle(Order order) {
 
 @KafkaListener 어노테이션을 지정하여 "tacocloud.orders.topic" 이름의 토픽에 메시지가 도착할 때 자동 호출되도록 설정하였다. 
 
-### **추가적인 메타데이터가 필요한 경우**
+### 추가적인 메타데이터가 필요한 경우
 
 ConsumerRecord나 Message 객체를 인자로 받아 메시지의 메타데이터를 받을 수 있다. 
 <br/><br/>

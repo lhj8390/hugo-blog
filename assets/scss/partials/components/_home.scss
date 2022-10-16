@@ -23,9 +23,11 @@
             list-style: none;
             max-width: 1080px;
 
-            @include mobile {
-              background-color: t('accent') !important;
-              display: block;
+            @include themed() {
+              @include mobile {
+                background-color: t('accent') !important;
+                display: block;
+              }
             }
 
             li {
@@ -67,7 +69,7 @@
     
     &__thumbnail {
         width: 100%;
-        height: $thumbnail-height;
+        height: $series-thumbnail-height;
         object-fit: cover;
         display: block;
     
@@ -78,7 +80,7 @@
           overflow: hidden;
           transition: box-shadow 0.3s ease;
           max-width: none;
-          height: $thumbnail-height;
+          height: $series-thumbnail-height;
           object-fit: cover;
 
           @include themed() {
