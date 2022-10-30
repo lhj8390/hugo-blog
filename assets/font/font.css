@@ -6,6 +6,12 @@
 }
 
 @font-face {
+  font-family: 'AppleSDGothic';
+  font-style: normal;
+  src: url(../font/AppleSDGothicNeoM.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'Fira Code';
   font-style: normal;
   /* font-weight: 400; */
