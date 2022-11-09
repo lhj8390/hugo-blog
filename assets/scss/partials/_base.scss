@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 * {
+  body {
+    letter-spacing: 0.1px;
+  }
 
   ::-webkit-scrollbar{
     width: 8px;
