@@ -1,3 +1,4 @@
 devops = ["kubernetes", "docker", "server"]
 frontend = ["react.js"]
 framework = ["spring"]
+language = ["go"]

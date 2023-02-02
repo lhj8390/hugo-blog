@@ -6,3 +6,5 @@
 "spring" = "fa-solid fa-leaf"
 "docker" = "fa-brands fa-docker"
 "server" = "fa-solid fa-server"
+"language" = "fa-solid fa-code"
+"go" = "fa-brands fa-golang"

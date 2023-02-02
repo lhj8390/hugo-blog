@@ -14,19 +14,11 @@
     margin: 0;
     list-style: none;
     padding: 0;
-    width: 100%;
-
-    @include themed() {
-      background-color: t('primary-lighter');
-    }
+    width: 90%;
 
     @include desktop_and_print {
       display: flex;
       padding: $py-desktop 30px;
-
-      @include themed() {
-        background-color: t('accent');
-      }
 
       &--end {
         flex-shrink: 1;

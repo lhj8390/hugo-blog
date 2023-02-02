@@ -153,6 +153,11 @@
       @include themed() {
         background-color: t('primary-lighter');
       }
+
+      code {
+        white-space: pre;
+        overflow-x: auto;
+      }
     }
 
     mark {
