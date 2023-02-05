@@ -16,6 +16,7 @@ $themes: (
     nav: $nav--lightmode,
     nav-target: $nav-target--lightmode,
     nav-expand: $nav-expand--lightmode,
+    button-active: $active-button-lightmode,
   ),
   dark: (
     accent: $accent--darkmode,
@@ -34,6 +35,7 @@ $themes: (
     nav: $nav--darkmode,
     nav-target: $nav-target--darkmode,
     nav-expand: $nav-expand--darkmode,
+    button-active: $active-button-darkmode,
   ),
 );
 

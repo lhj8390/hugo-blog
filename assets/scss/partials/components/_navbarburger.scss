@@ -57,6 +57,10 @@
       width: 400px;
       padding: 25px 0;
       box-sizing: border-box;
+      
+      @include themed() {
+        background: t('accent');
+      }
 
       &-item {
         line-height: 30px;
@@ -68,7 +72,7 @@
 
         &.watched {
           @include themed() {
-            background-color: #373840;
+            background-color: t('button-active');
           }
         }
 
@@ -85,7 +89,10 @@
       max-height: 0px;
       transition: max-height 300ms ease-out;
       overflow: hidden;
-      background-color: #3c3939;
+      // background-color: #3c3939;
+      @include themed() {
+        background-color: t('nav-expand');
+      }
       
       a {
         text-align: center;

@@ -51,7 +51,7 @@
 
   @include mobile {
     display: flex;
-    background-color: t('accent') !important;
+    // background-color: t('accent') !important;
     max-height: fit-content;
     justify-content: center;
   }
