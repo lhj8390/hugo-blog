@@ -227,6 +227,7 @@
 
       a {
         font-size: $font-size-h3;
+        line-height: 1.3;
 
         @include themed() {
           color: t('primary');

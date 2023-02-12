@@ -4,8 +4,8 @@ title = "Redux-Thunk를 이용한 상태관리"
 date = "2022-06-11"
 description = "Redux-Thunk 사용 이유 및 작동 원리, 기본적인 적용방법에 대해 작성했다."
 tags = ["frontend", "redux", "middleware", "react.js"]
-categories = ["frontend"]
-subcategories = ["React.js"]
+categories = ["web"]
+subcategories = ["react"]
 +++
 
 ## 개요

@@ -1,5 +1,4 @@
 devops = ["kubernetes", "docker", "server"]
-frontend = ["react.js"]
-framework = ["spring"]
+web = ["spring", "react"]
 language = ["go"]
 architecture = ["design pattern"]

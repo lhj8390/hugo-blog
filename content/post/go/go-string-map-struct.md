@@ -4,9 +4,7 @@ title = "Golang - 복합타입 (맵, 구조체) 사용하기"
 date = "2023-02-05"
 description = "golang에서 복합타입 중 맵, 구조체의 개념과 사용법, 예제를 설명한다."
 tags = ["Go", "Golang"]
-categories = [
-    "language"
-]
+categories = ["language"]
 subcategories = ["Go"]
 +++
 ## 문자열

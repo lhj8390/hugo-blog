@@ -5,7 +5,7 @@ author = "lhj8390"
 description = "JPA에서 영속성 컨텍스트(persistence context)의 개념을 정리한다."
 date = "2023-01-15"
 tags = ["spring", "web", "java", "spring boot", 'JPA', 'persistence context']
-categories = ["Framework"]
+categories = ["Web"]
 subcategories = ["Spring"]
 +++
 

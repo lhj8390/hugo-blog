@@ -4,9 +4,7 @@ title = "Golang - 배열과 슬라이스 사용하기"
 date = "2023-02-02"
 description = "golang에서 배열과 슬라이스의 개념과 사용법, 예제를 설명한다."
 tags = ["Go", "Golang"]
-categories = [
-    "language"
-]
+categories = ["language"]
 subcategories = ["Go"]
 +++
 ## 배열

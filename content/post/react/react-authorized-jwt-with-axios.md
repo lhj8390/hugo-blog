@@ -5,8 +5,8 @@ author = "lhj8390"
 description = "React axios를 사용해서 API 호출 시 JWT 인증을 수행하는 방법에 대해 기록한다."
 date = "2022-12-11"
 tags = ["frontend", "axios", "JWT", "react.js"]
-categories = ["frontend"]
-subcategories = ["React.js"]
+categories = ["web"]
+subcategories = ["react"]
 +++
 
 ## 목표

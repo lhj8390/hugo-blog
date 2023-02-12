@@ -5,7 +5,7 @@ author = "lhj8390"
 description = "스프링 시큐리티에서 JWT 인증을 수행하는 방법에 대해 정리했다."
 date = "2022-10-29"
 tags = ["spring", "web", "java", "spring boot", "spring security"]
-categories = ["Framework"]
+categories = ["Web"]
 subcategories = ["Spring"]
 +++
 

@@ -5,8 +5,8 @@ author = "lhj8390"
 description = "Redux Toolkit 예제와 기존 Redux와 Redux Toolkit(RTK)의 차이점에 대해 설명한다."
 date = "2022-11-09"
 tags = ["frontend", "redux", "react.js", "typescript"]
-categories = ["frontend"]
-subcategories = ["React.js"]
+categories = ["web"]
+subcategories = ["react"]
 +++
 > Redux는 상태 관리 라이브러리로 전역 상태를 효과적으로 관리하는데 도움을 준다. <br/>
 하지만 Redux를 제대로 활용하기 위해서는 많은 라이브러리를 추가적으로 설치해야 하는 불편함이 존재한다. 또한 많은 보일러플레이트 코드를 요구한다. <br/>
