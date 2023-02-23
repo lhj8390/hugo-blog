@@ -37,12 +37,10 @@ public class FactoryProducer {
 
     static BaseProductFactory getFactory(ProductType type) {
         switch (type) {
-            case COMPUTER:
-                return new ComputerFactory();
-            case TABLET:
-                return new TabletFactory();
-            case PHONE:
-                return new PhoneFactory();
+            case SAMSUNG:
+                return new SamsungFactory();
+            case LG:
+                return new LGFactory();
             default:
                 throw new IllegalArgumentException();
         }
@@ -60,40 +58,55 @@ public class FactoryProducer {
 ```java
 public abstract class BaseProductFactory {
 
-    public abstract Product createProduct(String name);
+    public abstract Phone createPhone();
+
+    public abstract Tablet createTablet();
+
+    public abstract Computer createComputer();
+
 }
 ```
-
-각 <span class="red">구상 팩토리(ConcreteFactory)에서 구현해야 하는 메소드를 정의</span>한다. → <span class="gray">*예제에서는 createProduct() 메소드*</span>  추상 메소드를 제공함으로써 각 구상 팩토리(ConcreteFactory)에서는 제품의 생성 방법만 구현하면 된다. <br/>
-→ *“구상 팩토리(ConcreteFactory) 간의 중복 코드를 줄이고 가독성을 높인다.”*
+각 <span class="red">관련 제품 개체를 만드는 추상 메서드 집합을 정의</span>한다. 추상 메소드를 제공함으로써 각 구상 팩토리(ConcreteFactory)에서는 제품의 생성 방법만 구현하면 된다.<br/>
+→ *“소프트웨어에서 다른 부분에 영향을 미치지 않고도 제품 객체들을 변경할 수 있기 때문에 시스템을 쉽게 유지보수하고 수정할 수 있다.”*
 
 <br/>
 
 구상 팩토리(ConcreteFactory) 클래스를 만들어준다.
 
 ```java
-public class ComputerFactory extends BaseProductFactory {
+public class SamsungFactory extends BaseProductFactory {
+
     @Override
-    public Product createProduct(String name) {
-        return new Computer(name);
+    public Phone createPhone() {
+        return new SamsungPhone();
+    }
+
+    @Override
+    public Tablet createTablet() {
+        return new SamsungTablet();
+    }
+
+    @Override
+    public Computer createComputer() {
+        return new SamsungComputer();
     }
 }
 ```
+BaseProductFactory 클래스(추상 팩토리)를 상속받아 여러 메소드에서 구상 제품(ConcreteProduct) 객체를 반환한다. 즉, 구상 팩토리(ConcreteFactory) 클래스에서는 <span class="red">제품의 생성 방법을 정의하고 추상 팩토리(AbstractFactory)에서 제공하는 추상 메소드를 구현</span>한다.<br/>
+→ *“클라이언트 코드에 영향을 주지 않고 제품 생성 프로세스를 변경하거나 업데이트할 수 있으므로 소프트웨어 시스템에서 유연성을 확보할 수 있다.”*
 
-BaseProductFactory 클래스(추상 팩토리)를 상속받아 createProduct() 메소드에서 구상 제품(ConcreteProduct) 객체를 반환한다. 즉, 구상 팩토리(ConcreteFactory) 클래스에서는 <span class="red">제품의 생성 방법을 정의하고 추상 팩토리(AbstractFactory)에서 제공하는 추상 메소드를 구현</span>한다. <br/>
-→ *“프로그램의 구조를 깔끔하게 유지할 수 있다”*
 
 <br/>
 
 추상 제품(AbstractProduct) 클래스를 만들어준다.
 
 ```java
-public abstract class Product {
+public abstract class Computer {
 
     public abstract void use();
 
     public void buy() {
-        System.out.println("제품을 구매하였습니다.");
+        System.out.println("컴퓨터를 구매하였습니다.");
     }
 }
 ```
@@ -106,20 +119,15 @@ public abstract class Product {
 구상 제품(ConcreteProduct) 클래스를 만들어준다.
 
 ```java
-public class Computer extends Product {
-    private final String name;
-    public Computer(String name) {
-        this.name = name;
-    }
-
+public class SamsungComputer extends Computer {
     @Override
     public void use() {
-        System.out.println(name + " 컴퓨터를 사용합니다.");
+        System.out.println("삼성 컴퓨터를 사용합니다.");
     }
 }
 ```
 
-Product 클래스(추상 제품)를 상속받아 <span class="red">추상 메소드에 대한 구체적인 기능을 구현</span>한다. 예제에서는 buy() 메소드를 추상 제품 클래스인 Product 클래스에서 정의한 그대로 사용하고 use() 메소드를 구체적으로 정의하였다.<br/>
+Computer 클래스(추상 제품)를 상속받아 <span class="red">추상 메소드에 대한 구체적인 기능을 구현</span>한다. 예제에서는 buy() 메소드를 추상 제품 클래스인 Computer 클래스에서 정의한 그대로 사용하고 use() 메소드를 구체적으로 정의하였다.<br/>
 → *“제품의 종류에 따라 구체적인 클래스를 생성할 수 있어, 다양한 제품을 쉽게 구현할 수 있다”*
 
 
@@ -141,5 +149,12 @@ Product 클래스(추상 제품)를 상속받아 <span class="red">추상 메소
 
 1. 클래스 수가 증가하고, 코드의 복잡성이 증가한다.
 2. 새로운 제품을 추가할 때, 팩토리 구조를 변경할 수도 있다.
+
+<br/>
+
+### 팩토리 메서드 패턴과의 차이점
+
+추상 팩토리 패턴은 한 팩토리에서 한 번에 여러 종속적이거나 관련된 객체 유형을 생성할 수 있다. (create() 메서드가 팩토리 클래스에 여러 개 존재)<br/>
+그러나 팩토리 메서드 패턴은 하나의 팩토리 메서드를 통해 하나의 객체 유형만을 생성한다.
 
 <br/>
