@@ -1,5 +1,11 @@
 .sidebar {
   margin-top: 40px;
+  max-height: 4824px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
 
   @include desktop_and_print {
     z-index: 2;
