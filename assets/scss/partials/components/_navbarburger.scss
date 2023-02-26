@@ -1,6 +1,6 @@
 .navbar-burger {
   cursor: pointer;
-  display: block;
+  display: none;
   height: 3.25rem;
   position: relative;
   width: 3.25rem;
@@ -34,8 +34,8 @@
     }
   }
 
-  @include desktop {
-    display: none;
+  @include mobile {
+    display: block;
   }
 }
 
@@ -49,6 +49,11 @@
     transition-duration: 0.2s;
     transition-property: right;
     right: -500px;
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
 
     .nav__list {
       overflow-x: hidden;
@@ -57,6 +62,7 @@
       width: 400px;
       padding: 25px 0;
       box-sizing: border-box;
+      
       
       @include themed() {
         background: t('accent');

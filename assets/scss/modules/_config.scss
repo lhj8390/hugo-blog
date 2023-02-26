@@ -32,6 +32,16 @@
   }
 }
 
+@mixin desktop_and_widescreen {
+  @include desktop {
+    @content;
+  }
+
+  @include widescreen {
+    @content;
+  }
+}
+
 @mixin ltr {
   @if $text-direction == ltr {
     @content;
