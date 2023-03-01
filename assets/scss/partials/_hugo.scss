@@ -20,7 +20,7 @@ blockquote {
     color: t('primary');
 
     @include ltr {
-      border-left: t('border');
+      border-left: 3px solid t('primary');
     }
 
     @include rtl {
