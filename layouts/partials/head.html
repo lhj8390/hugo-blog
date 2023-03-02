@@ -80,6 +80,16 @@
     crossorigin="anonymous"
     type="text/css"
   />
+
+  {{ $addOnStyle := resources.Get "css/add-on.css" | resources.Minify | resources.Fingerprint }}
+  <link
+    rel="stylesheet"
+    href="{{ $addOnStyle.RelPermalink }}"
+    integrity="{{ $addOnStyle.Data.Integrity }}"
+    crossorigin="anonymous"
+    type="text/css"
+  />
+
   {{ range .Site.Params.customCss }}
     {{ $minstyles := resources.Get . }}
     {{ $styles := $minstyles | resources.Minify | resources.Fingerprint }}

@@ -135,12 +135,20 @@
     code {
       font-family: 'Consolas', 'Fira code';
       line-height: 25px;
-      
 
       @include themed() {
         background-color: t('primary-lighter');
         border: 1px solid t('primary-lighter');
         border-radius: 2px;
+      }
+
+      .ln {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
     }
 
@@ -272,6 +280,21 @@
         border-radius: 2px;
       }
 
+      &.bg_b {
+        background-color: darkcyan;
+        color: white;
+        margin: 0 1px;
+        padding: 1px 3px;
+        border-radius: 2px;
+      }
+
+      &.wide {
+        padding: 5px;
+        padding-bottom: 0;
+        width: 100%;
+        display: inline-block;
+      }
+
       &.it {
         font-style: italic;
       }
@@ -306,6 +329,7 @@
     ol {
       line-height: 1.9em;
       font-weight: 400;
+      padding-inline-start: 30px;
     }
 
     img {
