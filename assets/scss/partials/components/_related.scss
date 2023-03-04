@@ -38,6 +38,8 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+                font-size: 1.4rem;
+    
                 @include mobile {
                     display: -webkit-box;
                     white-space: normal;
