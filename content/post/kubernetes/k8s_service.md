@@ -4,7 +4,6 @@ title = "쿠버네티스 서비스"
 date = "2022-06-04"
 description = "쿠버네티스의 서비스 개념 및 종류에 대해 설명한다."
 tags = ["DevOps", "server", "docker", "kubernetes", "k8s"]
-series = ["쿠버네티스 개념"]
 categories = [
     "DevOps"
 ]

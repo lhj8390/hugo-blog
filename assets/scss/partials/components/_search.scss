@@ -5,7 +5,7 @@
     max-width: 640px;
     width: 80%;
     height: 60%;
-    max-height: 480px;
+    max-height: 600px;
     @include themed() {
         background-color: t('primary-lighter');
 
@@ -37,7 +37,7 @@
 }
 
 #searchResults {
-    margin: 10px 5px;
+    margin: 10px 0;
     overflow: auto;
     padding: 0;
 
@@ -48,7 +48,7 @@
     li {
         list-style: none;
         border-radius: 5px;
-        padding: 10px;
+        padding: 10px 15px;
         position: relative;
         font-weight: 500;
 
@@ -67,7 +67,7 @@
         span {
             &.post-categories {
                 color: #ffffff;
-                padding: 2px;
+                padding: 2px 7px;
                 background-color: #808080;
                 margin-right: 5px;
                 border-radius: 3px;
@@ -105,6 +105,10 @@
             background-color: t('primary-light-highlight');
         } 
         
+    }
+
+    .entry-header {
+        margin: 5px 0;
     }
 
 }

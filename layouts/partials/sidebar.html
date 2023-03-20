@@ -51,7 +51,7 @@
       {{ $list := ( index .Site.Data.subcategories ) }}
       {{ $icon := .Site.Data.category_icon }}
       {{ range $key, $value := .Site.Taxonomies.categories.Alphabetical }}
-        <a href="{{ "/categories/" | relLangURL }}{{ $value.Name | urlize }}" class="{{ if in (lower $url) (lower $value.Name) }} watched {{ end }}">
+        <a href="{{ "/categories/" | relLangURL }}{{ $value.Name | urlize }}" class="{{ if eq (lower $url) (lower $value.Name) }} watched {{ end }}">
           {{ if isset $icon $value.Name }}
             <i class="{{ index $icon $value.Name}}"></i>
           {{ end }}
@@ -65,7 +65,7 @@
         
             <div class="expand__list">
               {{ range $subKey, $subValue := (index $list $value.Name) }}
-              <a href="/subcategories/{{ $subValue | urlize }}" class="{{ if in (lower $url) (lower $subValue) }} watched {{ end }}">
+              <a href="/subcategories/{{ $subValue | urlize }}" class="{{ if eq (lower $url) (lower $subValue) }} watched {{ end }}">
                 {{ if isset $icon $subValue }}
                   <i class="{{ index $icon $subValue}}"></i>
                 {{ end }}

@@ -24,7 +24,8 @@ window.onload = function () {
                             'permalink',
                             'summary',
                             'tags',
-                            'categories'
+                            'categories',
+                            'subcategories',
                         ]
                     };
                     if (params.fuseOpts) {
@@ -35,7 +36,7 @@ window.onload = function () {
                             minMatchCharLength: params.fuseOpts.minmatchcharlength ? params.fuseOpts.minmatchcharlength : 1,
                             shouldSort: params.fuseOpts.shouldsort ? params.fuseOpts.shouldsort : true,
                             findAllMatches: params.fuseOpts.findallmatches ? params.fuseOpts.findallmatches : false,
-                            keys: params.fuseOpts.keys ? params.fuseOpts.keys : ['title', 'permalink', 'summary', 'tags', 'categories'],
+                            keys: params.fuseOpts.keys ? params.fuseOpts.keys : ['title', 'permalink', 'summary', 'tags', 'categories', 'subcategories'],
                             location: params.fuseOpts.location ? params.fuseOpts.location : 0,
                             threshold: params.fuseOpts.threshold ? params.fuseOpts.threshold : 0.4,
                             distance: params.fuseOpts.distance ? params.fuseOpts.distance : 100,
@@ -85,12 +86,14 @@ sInput.onkeyup = function (e) {
 
             for (let item in results) {
                 const categoriesStr = results[item].item.categories.toString();
+                const subCategoriesStr = results[item].item.subcategories.toString();
                 let categories = categoriesStr.split(',');
+                let subCategories = subCategoriesStr.split(',');
 
                 resultSet += `<li class="post-entry"><header class="entry-header"><p>${results[item].item.title}</p>` +
                     `<p class="post-summary">${results[item].item.summary}</p>`;
                     for (let idx in categories) {
-                        resultSet += `<span class="post-categories">${categories[idx]}</span>`
+                        resultSet += `<span class="post-categories">${categories[idx]}</span> > <span class="post-categories">${subCategories[idx]}</span>`
                     }
 
                 resultSet += `</header><a href="${results[item].item.permalink}"></a></li>`
