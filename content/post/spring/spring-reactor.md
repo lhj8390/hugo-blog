@@ -43,7 +43,7 @@ thumbnail= "images/spring-basic.png"
 어떤 크기의 데이터셋이건 비동기 처리를 지원하고, 실시간으로 데이터를 처리하며, 백 프레셔를 사용하여 데이터 전달 폭주를 막는다.
 
 <aside>
-💡 <strong>백프레셔란?</strong>
+<strong>백프레셔란?</strong>
 
 데이터를 읽는 <span class="red">컨슈머가 처리할 수 있는 만큼 전달 데이터를 제한</span>하여 지나치게 빠른 데이터 소스로부터 데이터 전달 폭주를 피할 수 있는 수단이다.
 
@@ -134,7 +134,7 @@ processor는 Subscriber 역할로 데이터를 수신, 처리하고, Publisher �
 리액티브 플로우는 마블 다이어그램으로 나타낸다.
 
 <aside>
-❗    마블 다이어그램의 상단은 <span class="ul">데이터의 타임라인</span>, 중앙에는 <span class="ul">오퍼레이션</span>, 하단에는 <span class="ul">결과로 생성되는 타임라인</span>을 나타낸다.<br/>
+마블 다이어그램의 상단은 <span class="ul">데이터의 타임라인</span>, 중앙에는 <span class="ul">오퍼레이션</span>, 하단에는 <span class="ul">결과로 생성되는 타임라인</span>을 나타낸다.<br/>
 
 </aside>
 
@@ -340,7 +340,7 @@ public void zipFluxes() {
 순서대로 방출되기 때문에 **Tuple2**라는 두 개의 다른 객체를 전달하는 컨테이너 객체를 이용했다.
 
 <aside>
-💡 <strong>두 Flux 항목을 문자열로 결합할 경우</strong>
+<strong>두 Flux 항목을 문자열로 결합할 경우</strong>
 
 ```java
 Flux<String> zippedFlux = 
@@ -493,7 +493,7 @@ public void flatMap() {
 <span class="gray">※ flatMap() 오퍼레이션은 수행 도중 생성되는 임시 Flux를 사용하여 변환을 수행하므로 비동기 변환이 가능하다.</span>
 
 <aside>
-💡 <strong>subscribeOn()</strong>
+<strong>subscribeOn()</strong>
 
 각 구독이 병렬 스레드로 수행되어야 한다는 것을 나타낸다. subscribeOn()의 인자로는 사용하기 원하는 동시성 모델(Schedulers)을 지정할 수 있다.
 

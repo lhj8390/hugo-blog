@@ -109,7 +109,7 @@ spec:
 <br/><br/>
 
 <aside>
-💡 <strong>주의점</strong>
+<strong>주의점</strong>
 
 멀티포트 서비스를 만들 때는 각 포트의 이름을 지정해주어야 한다.
 </aside>
@@ -149,7 +149,7 @@ nodePort는 기본적으로 생략이 가능하다.<br/>
 
 <br/>
 <aside>
-💡 <strong>주의점</strong>
+<strong>주의점</strong>
 
 nodePort를 생략할 경우 서비스 재시작 시 nodePort는 계속 변경된다.
 </aside>
@@ -166,7 +166,7 @@ nodePort를 생략할 경우 서비스 재시작 시 nodePort는 계속 변경�
 
 
 <aside>
-💡 <strong>주의점</strong>
+<strong>주의점</strong>
 
 특정 노드에 장애가 발생 시, 클라이언트는 해당 서비스에 액세스할 수 없게 되고 자동으로 다른 노드를 통해 접근이 불가능하다.
 이를 해결하기 위해서는 별도의 로드밸런서가 필요하다.
@@ -246,7 +246,7 @@ a 네임스페이스의 my-service로 라우팅된다. **(my-service.a.svc.clust
 
 <br/><br/>
 <aside>
-💡 <strong>특징</strong>
+<strong>특징</strong>
 
 서비스를 사용하는 파드에서 _실제 서비스 이름과 위치가 숨겨져_
 나중에 externalName 속성을 변경하거나 서비스 스펙을 수정하면 다른 서비스를 가리킬 수 있다.

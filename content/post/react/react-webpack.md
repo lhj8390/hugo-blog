@@ -125,7 +125,7 @@ proxy를 통해 /api로 접근하면 http://localhost:8000 서버에서 해당 �
 <br /><br />
 
 <aside>
-💡 <strong>CORS 에러?</strong>
+<strong>CORS 에러?</strong>
 
   개발 편의상 로컬에 webpack-dev-server를 띄어놓는 경우가 많은데,
   보통 다른 도메인에서 요청을 보낼 경우 브라우저 보안으로 인해 CORS 에러가 발생한다.

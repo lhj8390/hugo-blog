@@ -28,7 +28,7 @@ Redux 개발 시 표준 로직이 되기 위해 고안된 패키지로, Redux �
 
 
 <aside>
-💡 Redux Toolkit은 Redux만 다루기 때문에 useSelector 나 useDispatch와 같은 React 구성 요소가 Redux store와 통신하기 위해서는 React-Redux 패키지가 필요하다.<br/>
+Redux Toolkit은 Redux만 다루기 때문에 useSelector 나 useDispatch와 같은 React 구성 요소가 Redux store와 통신하기 위해서는 React-Redux 패키지가 필요하다.<br/>
 </aside>
 
 ## Store 설정

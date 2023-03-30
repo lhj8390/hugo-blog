@@ -20,10 +20,6 @@ enableRobotsTXT = true
 #googleAnalytics = "UA-123-45"
 
 # Syntax highlighting
-pygmentsUseClasses = true   
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsStyle = "monokai"
 
 [outputs]
     home = [ "HTML", "RSS", "JSON"]
@@ -39,9 +35,8 @@ pygmentsStyle = "monokai"
         lineNoStart = 1
         lineNos = true
         lineNumbersInTable = false
-        noClasses = true
+        noClasses = false
         noHl = false
-        style = 'monokai'
         tabWidth = 4
 
 [taxonomies]

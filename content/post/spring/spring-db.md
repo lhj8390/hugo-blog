@@ -249,7 +249,7 @@ PreparedStatementCreator 객체를 만들기 위해서는
 2. **newPreparedStatementCreator**()를 호출하여 쿼리 매개변수 값을 인자로 전달한다.
 
 <aside>
-💡 setReturnGeneratedKeys(true) 으로 설정하여 자동 생성 키를 반환한다고 명시해주었다.<br/>
+setReturnGeneratedKeys(true) 으로 설정하여 자동 생성 키를 반환한다고 명시해주었다.<br/>
 
 </aside>
 

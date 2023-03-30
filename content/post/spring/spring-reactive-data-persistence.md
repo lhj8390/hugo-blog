@@ -70,7 +70,7 @@ tacoRepo.saveAll(tacos);
 Flux의 toIterable() 메서드를 통해 Flux의 모든 객체를 Iterable 타입으로 추출한다.
 
 <aside>
-Mono의 block() 메서드나 Flux의 toIterable() 메서드는 <strong><span class="red">추출 작업 시 블로킹 처리 된다.</span></strong> <br/>
+Mono의 block() 메서드나 Flux의 toIterable() 메서드는 <strong><span class="red">추출 작업 시 블로킹 처리 된다.</span></strong>
 이를 해결하기 위해서는 구독 발행 요소 각각에 오퍼레이션을 수행하는 것이 나은 방법이다.
 
 ```java
@@ -126,7 +126,7 @@ spring:
     스프링 데이터 카산드라에서 키 공간을 자동으로 생성하도록 설정할 수 있지만 직접 생성할 수도 있다. 키 공간은 **CQL**(*Cassandra Query Language*) 셸에서 `create keyspace` 명령어를 통해 생성할 수 있다.
     
     <aside>
-      💡 키 공간 : 카산드라 노드의 테이블을 모아 놓은 것이다. 관계형 데이터베이스의 <strong>스키마와 유사하다.</strong>
+    키 공간 : 카산드라 노드의 테이블을 모아 놓은 것이다. 관계형 데이터베이스의 <strong>스키마와 유사하다.</strong>
     </aside>
     
 - `schema-action` : **스키마의 행동을 지정한다.**<br/>
@@ -174,8 +174,8 @@ public class Taco {
     
     
 <aside>
-  💡 <strong>Ingredient 클래스를 재사용할 수 없는 이유</strong><br/>
-  해당 클래스에는 이미 @Table 어노테이션을 통해 카산드라의 도메인 타입으로 매핑을 했기 때문이다. <br/>
+  <strong>Ingredient 클래스를 재사용할 수 없는 이유</strong><br/>
+  해당 클래스에는 이미 @Table 어노테이션을 통해 카산드라의 도메인 타입으로 매핑을 했기 때문이다.
   <span class="red">UDT 클래스를 새로 만들어 데이터가 어떻게 저장되는지 정의해야 한다.</span><br/>
 </aside>   <br/><br/>
 

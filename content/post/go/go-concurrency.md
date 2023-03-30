@@ -64,7 +64,7 @@ ch <- b     // ch 에 b의 값을 쓴다.
 채널 변수 왼쪽에 `<-` 연산자를 두면 <span class="orange">*채널로부터 데이터를 읽고*</span> 채널 변수 오른쪽에 `<-` 연산자를 두면 <span class="orange">*채널에 데이터를 쓸 수 있다.*</span>
 
 <aside>
-💡 <span class="red">하나의 고루틴으로 같은 채널을 읽고 쓰는 것은 불가능하다.</span> 읽기 전용이라는 것을 나타내기 위해 chan 키워드 앞에 `<-` 연산자를 (<span class="gray">ch ←chan int</span>), 쓰기 전용이라는 것을 나타내기 위해 chan 키워드 뒤에 `<-` 연산자를 (<span class="gray">ch chan← int</span>) 사용한다.<br/>
+<span class="red">하나의 고루틴으로 같은 채널을 읽고 쓰는 것은 불가능하다.</span> 읽기 전용이라는 것을 나타내기 위해 chan 키워드 앞에 `<-` 연산자를 (<span class="gray">ch ←chan int</span>), 쓰기 전용이라는 것을 나타내기 위해 chan 키워드 뒤에 `<-` 연산자를 (<span class="gray">ch chan← int</span>) 사용한다.<br/>
 
 </aside>
 
@@ -493,7 +493,7 @@ WaitGroup이 제공하는 메서드는 다음과 같다.
 - Wait : 카운터가 0이 될 때까지 고루틴 일시중지
 
 <aside>
-💡 WaitGroup은 사용하기 쉽지만 고루틴을 설계할 때 무조건 사용해서는 안된다. 작업 고루틴이 종료하고 나서 정리할 필요가 있을 경우에만 사용하는 것이 좋다.<br/>
+WaitGroup은 사용하기 쉽지만 고루틴을 설계할 때 무조건 사용해서는 안된다. 작업 고루틴이 종료하고 나서 정리할 필요가 있을 경우에만 사용하는 것이 좋다.<br/>
 
 </aside>
 

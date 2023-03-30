@@ -106,7 +106,7 @@ public class FileWriterIntegrationConfig {
 **FileWritingMessageHandler (파일 아웃바운드 채널 어뎁터 역할)** : @ServiceActivator을 통해 fileWriterChannel로부터 메시지를 받아 FileWritingMessageHandler의 인스턴스로 정의된 서비스에 넘겨 메시지 페이로드를 지정된 디렉터리의 파일에 쓴다.
 
 <aside>
-💡 채널들을 별도로 선언하지 않았는데, textInChannel과 fileWriterChannel 이름의 빈이 없으면 채널이 <span class="ul">자동으로 생성</span>되기 때문이다.<br/>
+채널들을 별도로 선언하지 않았는데, textInChannel과 fileWriterChannel 이름의 빈이 없으면 채널이 <span class="ul">자동으로 생성</span>되기 때문이다.<br/>
 
 </aside>
 <br/><br/>
@@ -179,7 +179,7 @@ DSL 구성 또한 채널을 별도로 구성하지 않는다면 채널이 자동
 <span class="red">자바 구성과 DSL 구성 모두 입력 채널은 자동으로 생성되며, 기본적으로 DirectChannel이 사용된다.</span>
 
 <aside>
-💡 <strong>QueueChannel 사용시 주의사항</strong><br/>
+<strong>QueueChannel 사용시 주의사항</strong><br/>
 컨슈머가 이 채널을 polling(도착 메시지가 있는지 지속적으로 확인)하도록 구성해야 한다.
 
 ```java
@@ -325,7 +325,7 @@ poChannel 채널로 도착한 주문 메시지는 OrderSplitter로 분할된다.
 분할된 메시지는 PayloadTypeRouter에 의해 **각 페이로드 타입을 기반으로 서로 다른 채널에 메시지를 전달한다.** BillingInfo 파입의 페이로드는 billingInfoChannel로, List 타입의 페이로드는 lineItemsChannel에 전달된다.
 
 <aside>
-💡 <strong>List 내부의 객체를 별도로 처리하고 싶은 경우</strong>
+<strong>List 내부의 객체를 별도로 처리하고 싶은 경우</strong>
 
 ```java
 @Splitter(inputChannel="lineItemsChannel" outputChannel="lineItemChannel")

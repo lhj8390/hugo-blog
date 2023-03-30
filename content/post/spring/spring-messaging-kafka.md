@@ -181,7 +181,7 @@ Message 객체를 통해 메시지의 파티션과 타입스탬프를 로깅하�
 <br/><br/>
 
 <aside>
-💡 <strong>메시지 페이로드도 ConsumerRecord나 Message 객체를 통해 받을 수 있다!</strong>  
+<strong>메시지 페이로드도 ConsumerRecord나 Message 객체를 통해 받을 수 있다!</strong>  
 
 	- ConsumerRecord.value()
 	-  Message.getPayload()

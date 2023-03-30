@@ -449,7 +449,7 @@ func main() {
 내장 함수 recover는 패닉을 확인하기 위한 defer 내부에서 호출된다. defer 함수를 등록하고 if 문 내에서 recover 함수를 호출하고 nil이 아닌 값인지 확인한다.
 
 <aside>
-💡 패닉이 발생하면 defer로 등록된 함수만 실행할 수 있기 때문에 recover는 반드시 defer 내부에서 호출해야 한다.<br/>
+패닉이 발생하면 defer로 등록된 함수만 실행할 수 있기 때문에 recover는 반드시 defer 내부에서 호출해야 한다.<br/>
 
 </aside>
 

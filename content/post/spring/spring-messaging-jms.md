@@ -136,7 +136,7 @@ public void sendOrder(Order order) {
 MessageCreator 인터페이스의 **createMessage(Session) 함수를 오버라이딩하여** 전달된 Order 객체로부터 새로운 메시지를 생성한다.
 
 <aside>
-💡 람다식으로 적용하면 다음과 같다.
+람다식으로 적용하면 다음과 같다.
 
 ```java
 @Override

@@ -46,7 +46,7 @@ implementation 'org.springframework.boot:spring-boot-starter-webflux'
 WebFlux를 사용할 경우에는 내장 서버가 톰캣 대신 Netty가 된다.
 
 <aside>
-💡 <strong>Netty</strong> : 비동기적인 이벤트 중심의 서버 중 하나<br/>
+<strong>Netty</strong> : 비동기적인 이벤트 중심의 서버 중 하나<br/>
 
 </aside>
 
@@ -210,10 +210,9 @@ expectStatus() 메서드를 호출하여 응답이 200(OK) 상태 코드를 가�
 jsonPath() 메서드를 호출하여 응답 몸체의 JSON이 기대값을 가지는지 검사한다.
 <br/><br/>
 <aside>
-❗ &nbsp;응답에 JSON 데이터가 많아 복잡한 경우에는 json() 메서드를 사용한다. 
+응답에 JSON 데이터가 많아 복잡한 경우에는 json() 메서드를 사용한다. 
 
 **json()** : <span class="red">JSON을 포함하는 String을 인자로 받아 응답과 비교한다.</span>
-
 ```java
 ClassPathResource recentsResource = new ClassPathResource("/tacos/recent.json");
 String recentsJson = StreamUtils.copyToString(
@@ -238,9 +237,7 @@ testClient.get().uri("/design/recent")
   .expectBodyList(Taco.class)
   .contains(Arrays.copyOf(tacos, 12));
 ```
-
 응답이 <span class="red">List에 저장된 12가지 요소를 모두 포함하는지</span> 검사하는 로직이다.
-
 </aside>
 
 ### POST 요청 테스트

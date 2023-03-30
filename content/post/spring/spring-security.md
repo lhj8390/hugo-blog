@@ -88,7 +88,7 @@ SecurityConfig 클래스는 보안 구성 클래스인 WebSecurityConfigurerAdap
 > 사용자 스토어는 SecurityConfig 클래스에서 **configure(AuthenticationManagerBuilder)** 메서드를 오버라이딩하여 구성할 수 있다.
 > 
 
-### **인메모리 사용자 스토어**
+### 인메모리 사용자 스토어
 
 user1, user2라는 사용자를 인메모리 사용자 스토어에 구성하는 예제이다.
 
@@ -113,7 +113,7 @@ inMemoryAuthentication() 메서드를 사용하여 보안 구성 자체에 사�
 - authorities() : 권한 설정 - <span class="gray it">roles(”user”) 로도 사용할 수 있다.</span>
 - and() : 연속해서 withUser() 호출 가능
 
-### **JDBC 기반의 사용자 스토어**
+### JDBC 기반의 사용자 스토어
 
 관계형 데이터베이스에 유지되는 사용자 정보를 스토어에 구성하는 예제이다.
 
@@ -135,16 +135,15 @@ jdbcAuthentication() 메서드 호출과 함께 데이터베이스에 액세스�
 <br/><br/>
 
 <aside>
-💡  <span class="red">스프링 시큐리티의 SQL 쿼리를 대체할 때의 주의사항!</span>
-
-	1.  스프링 시큐리티의 기본 데이터베이스 테이블 이름이 달라도 되지만 테이블이 갖는 데이터 타입과 길이는 일치해야 한다.
-	2.  where 절에서 사용되는 매개변수는 하나이고, 그 매개변수는 username이어야 한다.
-	3. 사용자 정보 인증 쿼리에서는 username, password, enabled 열의 값을 반환하여야 한다.
-	4. 사용자 권한 쿼리에서는 username과 authority을 포함하는 0 또는 다수의 행을 반환할 수 있다.
-	5. 그룹 권한 쿼리에서는 group id, group_name, authority을 포함하는 0 또는 다수의 행을 반환할 수 있다.
+<span class="red">스프링 시큐리티의 SQL 쿼리를 대체할 때의 주의사항!</span><br/>
+1.  스프링 시큐리티의 기본 데이터베이스 테이블 이름이 달라도 되지만 테이블이 갖는 데이터 타입과 길이는 일치해야 한다.
+2.  where 절에서 사용되는 매개변수는 하나이고, 그 매개변수는 username이어야 한다.
+3. 사용자 정보 인증 쿼리에서는 username, password, enabled 열의 값을 반환하여야 한다.
+4. 사용자 권한 쿼리에서는 username과 authority을 포함하는 0 또는 다수의 행을 반환할 수 있다.
+5. 그룹 권한 쿼리에서는 group id, group_name, authority을 포함하는 0 또는 다수의 행을 반환할 수 있다.<br/>
 </aside>
 
-### **LDAP 기반의 사용자 스토어**
+### LDAP 기반의 사용자 스토어
 
 LDAP 인증의 간단한 구성방법에 대한 예제이다.
 
@@ -170,7 +169,7 @@ public void configure(AuthenticationManagerBuilder auth) throws Exception {
 **userSearchFilter()** 와 **groupSearchFilter()** 메서드 : LDAP 기본 쿼리의 필터를 제공하기 위해 사용한다. 사용자와 그룹을 검색할 수 있다.<br/>
 **userSearchBase()** 와 **groupSearchBase()** 메서드 : 사용자와 그룹을 찾기 위한 기준점 쿼리를 지정할 수 있다. - <span class="gray it">루트로부터 검색하지 않고 사용자는 people 구성 단위(OU), 그룹은 groups 구성 단위부터 검색이 시작된다.</span>
 
-### **사용자 인증 커스터마이징**
+### 사용자 인증 커스터마이징
 
 사용자 데이터를 JPA를 통해 처리하기 위해서는 사용자 도메인 객체와 퍼시스턴스를 직접 정의해야 한다.<br/>
 사용자 데이터를 구현하는 User 객체와 user 데이터를 넣는 repository를 만든 다음,  스프링 시큐리티 구성 내부에 UserDetailsService 구현체를 넘겨줘서 구현한다.

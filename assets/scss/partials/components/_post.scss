@@ -120,9 +120,9 @@
 
     .chroma {
       @include themed() {
-        background-color: t('primary-lighter');
+        background-color: t('primary-light-highlight');
         display: block;
-        border-bottom: 1px solid t('primary-lighter');
+        border-bottom: 1px solid t('primary-light-highlight');
         border-radius: 5px;
         padding: 15px;
       }
@@ -177,6 +177,16 @@
       padding: 0 15px;
       white-space: pre-wrap;
       border-radius: 5px;
+      position: relative;
+      line-height: 23px;
+      padding-left: 40px;
+
+      &::before {
+        content: "🚨";
+        position: absolute;
+        left: 10px;
+        top: 20px;
+      }
 
       > p {
         margin: 0;

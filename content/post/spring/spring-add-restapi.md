@@ -113,7 +113,7 @@ public Order patchOrder(@PathVariable("orderId") Long orderId, @RequestBody Orde
 PATCH는 데이터의 일부만 변경하도록 각각의 필드값이 null이 아닌지 확인 후 해당 필드 값만 변경을 시도한다.
 
 <aside>
-⚠️ 어노테이션은 어떤 종류의 요청을 메서드에서 처리하는지만 나타내기 때문에 일부 데이터를 변경하는 로직을 직접 작성해야 한다.<br/>
+어노테이션은 어떤 종류의 요청을 메서드에서 처리하는지만 나타내기 때문에 일부 데이터를 변경하는 로직을 직접 작성해야 한다.<br/>
 
 </aside>
 
@@ -250,7 +250,7 @@ public CollectionModel<EntityModel<Taco>> recentTacos() {
 - **WebMvcLinkBuilder.withRel() :** 해당 URL의 relation name을 지정한다.
 
 <aside>
-💡 WebMvcLinkBuilder의 slash() 메서드 대신 <strong>methodOn()</strong> 메서드를 사용할 수 있다.
+WebMvcLinkBuilder의 slash() 메서드 대신 <strong>methodOn()</strong> 메서드를 사용할 수 있다.
 
 ```java
 WebMvcLinkBuilder.linkTo(methodOn(DesignTacoController.class).recentTacos()).withRel("recents")
@@ -457,7 +457,7 @@ public class RecentTacosController {
 즉 @GetMapping은 /tacos/recent 경로로 매핑되지만 @RepositoryRestController를 통해 recentTacos() 메서드는 /api/tacos/recent의 GET 요청을 처리하게 된다.
 
 <aside>
-💡 <strong>주의할 점!</strong>
+<strong>주의할 점!</strong>
 
 @RepositoryRestController는 @RestController와 동일한 기능을 수행하지 않는다.
 따라서 @ResponseBody 어노테이션을 지정하거나 응답 데이터를 포함하는 ResponseEntity를 반환해야 한다.

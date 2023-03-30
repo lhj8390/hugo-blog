@@ -19,7 +19,7 @@ subcategories = ["react"]
 > 
 <br/>
 <aside>
-💡 <strong>middleware란?</strong>
+<strong>middleware란?</strong>
 
   dispatch 함수를 결합해서 새 dispatch 함수를 반환하는 고차함수.
   비동기 API 호출을 일련의 동기 action으로 바꾸는데 유용하다.
@@ -57,7 +57,7 @@ Redux-thunk를 사용하지 않고 해당 코드로 action 호출 시 하단의 
 
 <br/>
 <aside>
-❓  <strong>console에 찍어보면 객체인데??</strong>
+<strong>console에 찍어보면 객체인데??</strong>
 
   console에 찍히는 response 객체는 해당 함수가 종료되고 return되는 값으로 
   리듀서로 dispatch되는 최초의 액션 형태는 plain이 아닌 async await 함수의 형태가 된다.

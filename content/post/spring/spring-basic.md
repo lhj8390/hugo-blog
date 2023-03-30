@@ -202,7 +202,7 @@ Thymeleaf나 freeMarker 같은 템플릿은 모든 웹 요청마다 매번 파�
 DevTools는 템플릿 캐싱을 비활성화하여 브라우저를 새로고침하면 변경된 템플릿이 적용된다.
 
 <aside>
-💡 <strong>LiveReload</strong> 플러그인을 사용한다면 템플릿, 이미지, 자바스크립트 등 변경이 생길 때 브라우저가 자동으로 새로고침된다.<br/>
+<strong>LiveReload</strong> 플러그인을 사용한다면 템플릿, 이미지, 자바스크립트 등 변경이 생길 때 브라우저가 자동으로 새로고침된다.<br/>
 </aside>
 <br/>
 
