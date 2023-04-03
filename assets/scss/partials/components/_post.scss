@@ -124,7 +124,7 @@
         display: block;
         border-bottom: 1px solid t('primary-light-highlight');
         border-radius: 5px;
-        padding: 15px;
+        padding: 20px 15px;
       }
 
       * {
@@ -139,8 +139,8 @@
 
       @include themed() {
         background-color: t('primary-lighter');
-        border: 1px solid t('primary-lighter');
-        border-radius: 2px;
+        // border: 1px solid t('primary-lighter');
+        // border-radius: 2px;
       }
 
       .ln {
