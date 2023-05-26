@@ -29,6 +29,8 @@ service HelloService {
 3. 서버는 클라이언트의 요청 메시지를 수신하면 응답을 작성한다. 응답이 성공한 경우 상태 코드 및 상태 메시지와 후행 메타데이터를 클라이언트로 반환한다.
 4. 응답 상태가 정상이면 클라이언트는 응답을 수신하여 클라이언트 측에서의 호출을 완료한다.
 
+<a href="https://lhj8390.github.io/post/go/go-grpc-unary-example/">Unary RPC 통신 방식 예제 </a>
+
 <br/>
 
 ### Server streaming RPC
