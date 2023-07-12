@@ -18,7 +18,7 @@ subcategories = ["algorithm"]
 
 주어진 배열의 첫 번째 요소부터 마지막 요소까지 순차적으로 탐색하면서 현재 요소까지의 누적합을 계산하여 새로운 배열에 저장한다.
 
-![300](1.png)
+{{<figure src="/images/algorithm-prefix-sum/1.png" class="large">}}
 
 sum[i] 에는 data[0] + data[1] + ... data[i - 1]의 값이 들어간다.
 즉, `sum[i] = sum[i - 1] + data[i]` 이다.
@@ -46,7 +46,7 @@ sum = prefix_sum(n)
 
 누적합을 이용하여 배열의 일부 구간에 대한 합을 빠르게 구할 수 있다.
 
-![300](2.png)
+{{<figure src="/images/algorithm-prefix-sum/2.png" class="large">}}
 
 data 배열의 1 ~ 3까지의 부분합을 구하려면 3까지의 누적합에서 1까지의 누적합을 빼면 된다. 
 즉, data 배열의 i 항 부터 j 항까지의 합을 구할 경우 `prefixSum = sum[j] - sum[i -1]` 이 된다.
@@ -57,7 +57,7 @@ data 배열의 1 ~ 3까지의 부분합을 구하려면 3까지의 누적합에�
 
 2차원 배열은 1차원 배열의 누적합 개념에서 왼쪽에서 오른쪽 방향, 위에서 아래방향 두 번의 쿼리 단계를 거쳐야 한다.
 
-![[Pasted image 20230711223115.png]]
+{{<figure src="/images/algorithm-prefix-sum/3.png" class="large">}}
 
 sum[i][j] 에는 data[0][0] 부터 data[i - 1][j - 1] 까지의 합이 담겨져 있다.
 즉, `sum[i][j] = data[0][0] + data[0][1] + ... + data[0][j-1] + ... + data[i-1][j-1]` 이 된다.<br/>
@@ -86,7 +86,7 @@ prefixSum = prefix_sum(n,m)
 
 2차원 배열 또한 누적합을 이용하여 배열의 일부 구간에 대한 합을 빠르게 구할 수 있다.
 
-![[4.png]]
+{{<figure src="/images/algorithm-prefix-sum/4.png" class="large">}}
 
 data 의 (x1, y1) 부터 (x2, y2) 까지의 합은 `sum[x2+1][y2+1] - sum[x1][y2+1] - sum[x2+1][y1] + sum[x1][y1]` 이 된다.
 
