@@ -10,3 +10,5 @@
 "go" = "fa-brands fa-golang"
 "architecture" = "fa-solid fa-sitemap"
 "design pattern" = "fa-solid fa-diagram-project"
+"etc" = "fas fa-comment-dots"
+"algorithm" = "fa-solid fa-robot"
